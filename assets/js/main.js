@@ -1,18 +1,6 @@
 "use strict";
 
-/*!
-<--!==================================================================!-->
-<--!==================================================================!-->
-* Theme Name: Brinex
-* Description: The Ultimate Business Template
-* License: https://wrapmarket.com/help/licenses
-* Copyright: Copyright(c) 2025    
-* Author: codespace
-* File: main.min.js
-* Version: 1.0.0    
-<--!==================================================================!-->
-<--!==================================================================!-->
-*/
+
 var theme = {
   init: function () {
     theme.preLoader();

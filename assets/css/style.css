@@ -2631,7 +2631,7 @@ h6 {
   content: "";
   position: absolute;
   mix-blend-mode: normal;
-  background: url(../images/shape/shape-page-title-pattern.png), linear-gradient(to right, rgba(0, 77, 56, 0.9) 30%, transparent);
+  background: url(../images/shape/shape-page-title-pattern.png), linear-gradient(to right, rgba(14, 0, 77, 0.9) 30%, transparent);
   background-size: cover;
 }
 .page-title-section.page-title-banner-01::before {
@@ -5959,7 +5959,7 @@ body .loader-wrapper .loader {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-image: url(../images/bg/bg-man-with-phone.jpg);
+  background-image: url(../images/bg/jf.jpg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7100,7 +7100,7 @@ body .loader-wrapper .loader {
   margin-right: 5px;
   margin-bottom: 5px;
   display: inline-block;
-  background: linear-gradient(90deg, #f8f9fa 0%, #004d38 100%);
+  background: linear-gradient(90deg, #f8f9fa 0%, #08004d 100%);
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
   -o-border-radius: 50px;
@@ -7678,7 +7678,7 @@ body .loader-wrapper .loader {
   left: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(0deg, rgba(0, 77, 56, 0.8) 0%, rgba(0, 77, 56, 0) 70%);
+  background: linear-gradient(0deg, rgba(29, 8, 135, 0.8) 0%, rgba(0, 77, 56, 0) 70%);
   transition: all 0.4s cubic-bezier(0.37, 0, 0.63, 1);
   z-index: 1;
 }
@@ -7716,7 +7716,7 @@ body .loader-wrapper .loader {
   transform: scale(1.1);
 }
 .wc-blog-metro-area .blog-card:hover .overlay {
-  background: linear-gradient(0deg, rgba(0, 77, 56, 0.9) 0%, rgba(0, 77, 56, 0.1) 70%);
+  background: linear-gradient(0deg, rgba(11, 11, 131, 0.9) 0%, rgba(0, 77, 56, 0.1) 70%);
 }
 
 /*------------- wc-blog-classic-area ------------ */
