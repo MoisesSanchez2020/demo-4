@@ -25,8 +25,56 @@
 * 02. THEME VARIABLES
 <--!----------------------------------------------------------------!-->
 */
-:root{ --wc-white: #ffffff;--wc-muted: #6c757d;--wc-secondary: #6c757d;--wc-success: #252ac5;--wc-info: #02a0e4;--wc-warning: #e49e3d;--wc-danger: #dc3131;--wc-black: #000000;--wc-dark: #212529;--wc-dark-alt: #1b1e22;--wc-primary: #0d6efd;--wc-primary-alt: #0b5ed7;--wc-primary-rgb: 13,110,253;--wc-brand: #eceb41;--wc-brand-alt: #d4d432;--wc-light: #ecf2f2;--wc-light-alt: #e3ebeb;--wc-border: #dfe6e6;--wc-border-alt: #d6dddd;--wc-border-alt-2: #c5c9cc;--wc-menu-color: var(--wc-dark);--wc-bg-gradient-1: linear-gradient(120deg, #eceb41 0%, #0e0159 100%);--wc-bg-gradient-2: linear-gradient(120deg, #040159 0%, #eceb41 100%);--wc-bg-gradient-to-top: linear-gradient(to top, #ecf2f2, transparent);--wc-bg-gradient-to-bottom: linear-gradient(to bottom, #ecf2f2, transparent);--wc-shadow-none: none;--wc-shadow-sm: 0 10px 20px rgba(0, 0, 0, 0.08);--wc-shadow-md: 0 15px 40px rgba(0, 0, 0, 0.08);--wc-shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.08);--wc-shadow-xl: 0 30px 90px rgba(0, 0, 0, 0.08);--wc-shadow-xxl: 0 40px 100px rgba(0, 0, 0, 0.08);--wc-shadow-3xl: 0 50px 120px rgba(0, 0, 0, 0.08);--wc-shadow-modern: 0 1px 3px 0 rgb(0 0 0 / 0.1),0 1px 2px -1px rgb(0 0 0 / 0.1);--wc-ff-body: "Mulish",sans-serif;--wc-ff-number: "Sora",sans-serif;--wc-ff-heading: "Red Hat Display",sans-serif;--wc-ff-misc: "Plus Jakarta Sans",sans-serif;--bs-body-font-size: 16px;--bs-body-font-weight: 400;--bs-body-line-height: 1.5;--bs-body-color: #5D6666;--bs-primary: var(--wc-primary);--bs-primary-rgb: 13,110,253;--bs-link-color-rgb: 10,10,10;--bs-link-hover-color-rgb: 0,77,56;--bs-font-sans-serif: var(--wc-ff-body);--bs-heading-color: #0A0A0A;}
-/*!
+:root {
+  --wc-white: #ffffff;
+  --wc-muted: #6c757d;
+  --wc-secondary: #6c757d;
+  --wc-success: #252ac5;
+  --wc-info: #02a0e4;
+  --wc-warning: #e49e3d;
+  --wc-danger: #dc3131;
+  --wc-black: #000000;
+  --wc-dark: #212529;
+  --wc-dark-alt: #1b1e22;
+  --wc-primary: #659df2;
+  --wc-primary-alt: #0b5ed7;
+  --wc-primary-rgb: 13,110,253;
+  --wc-brand: #6b91f8;
+  --wc-brand-alt: #d4d432;
+  --wc-light: #ecf2f2;
+  --wc-light-alt: #e3ebeb;
+  --wc-border: #dfe6e6;
+  --wc-border-alt: #d6dddd;
+  --wc-border-alt-2: #c5c9cc;
+  --wc-menu-color: var(--wc-dark);
+  --wc-bg-gradient-1: linear-gradient(120deg, #004E92 0%, #00C6FF 100%);
+  --wc-bg-gradient-2: linear-gradient(120deg, #00C6FF 0%, #004E92 100%);
+  --wc-bg-gradient-to-top: linear-gradient(to top, #edecf2, transparent);
+  --wc-bg-gradient-to-bottom: linear-gradient(to bottom, #ecf2f2, transparent);
+  --wc-shadow-none: none;
+  --wc-shadow-sm: 0 10px 20px rgba(0, 0, 0, 0.08);
+  --wc-shadow-md: 0 15px 40px rgba(0, 0, 0, 0.08);
+  --wc-shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.08);
+  --wc-shadow-xl: 0 30px 90px rgba(0, 0, 0, 0.08);
+  --wc-shadow-xxl: 0 40px 100px rgba(0, 0, 0, 0.08);
+  --wc-shadow-3xl: 0 50px 120px rgba(0, 0, 0, 0.08);
+  --wc-shadow-modern: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --wc-ff-body: "Mulish", sans-serif;
+  --wc-ff-number: "Sora", sans-serif;
+  --wc-ff-heading: "Red Hat Display", sans-serif;
+  --wc-ff-misc: "Plus Jakarta Sans", sans-serif;
+  --bs-body-font-size: 16px;
+  --bs-body-font-weight: 400;
+  --bs-body-line-height: 1.5;
+  --bs-body-color: #5D6666;
+  --bs-primary: var(--wc-primary);
+  --bs-primary-rgb: 13,110,253;
+  --bs-link-color-rgb: 10,10,10;
+  --bs-link-hover-color-rgb: 0,77,56;
+  --bs-font-sans-serif: var(--wc-ff-body);
+  --bs-heading-color: #0A0A0A;
+}
+/*
 <--!----------------------------------------------------------------!-->
 * 03. COMMON CSS
 <--!----------------------------------------------------------------!-->
