@@ -7600,3 +7600,7 @@ body .loader-wrapper .loader {
 :root {
   --wc-primary: #007bff !important; /* Force blue override */
 }
+
+#about {
+  background: linear-gradient(120deg, #589ef3 0%, #00c6ff 100%);
+}

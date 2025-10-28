@@ -965,3 +965,4 @@ body .loader-wrapper .loader{ height: 5px;width: 200px;border-radius: 5px;--c: n
 .wc-shop-single-area .product-image .swiper-thumbs{ margin-top: 12px;}
 .wc-shop-single-area .product-image .swiper-thumbs .swiper-slide{ opacity: .5;cursor: pointer;border-radius: 4px;}
 .wc-shop-single-area .product-image .swiper-thumbs .swiper-slide.swiper-slide-thumb-active{ opacity: 1;background-color: var(--wc-light);}
+
