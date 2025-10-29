@@ -197,36 +197,33 @@ var theme = {
     });
   },
 
-  /* -------------------------- Progress Bar -------------------------- */
-  progressBar: () => {
-    $(function () {
-      const progressBars = [
-        { id: "#circle-progress-01", value: 0.85, percent: 85 },
-        { id: "#circle-progress-02", value: 0.8, percent: 80 },
-        { id: "#circle-progress-03", value: 0.9, percent: 90 },
-        { id: "#circle-progress-04", value: 0.85, percent: 85 },
-      ];
-
-      progressBars.forEach((bar) => {
-        $(bar.id)
-          .circleProgress({
-            size: 180,
-            value: bar.value,
-            thickness: 6,
-            duration: 5000,
-            startAngle: -Math.PI / 2,
-            lineCap: "round",
-            fill: { color: "#015941" },
-            emptyFill: "#eceb41",
-          })
-          .on("circle-animation-progress", function (event, progress) {
-            $(this)
-              .find("strong")
-              .html(Math.round(bar.percent * progress) + "<i>%</i>");
-          });
+/* -------------------------- Progress Bar -------------------------- */
+/* -------------------------- Progress Bar (Static Version) -------------------------- */
+progressBar: () => {
+  $(window).on("load", function () {
+    $(".circle-progress-bar").each(function () {
+      $(this).css({
+        width: "180px",
+        height: "180px",
+        "border-radius": "50%",
+        "border": "6px solid #0078ff",
+        "background-color": "#fff",
+        display: "flex",
+        "align-items": "center",
+        "justify-content": "center",
+        margin: "0 auto",
+        "box-shadow": "0 8px 16px rgba(0,0,0,0.1)",
+      });
+      $(this).find("strong").css({
+        "font-size": "28px",
+        "font-weight": "700",
+        color: "#0078ff",
       });
     });
-  },
+  });
+},
+
+
 
   /* -------------------------- magnificPopup -------------------------- */
   magnificPopup: () => {
@@ -743,3 +740,4 @@ var theme = {
   },
 };
 theme.init();
+
