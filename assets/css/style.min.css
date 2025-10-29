@@ -215,8 +215,8 @@ h1,h2,h3,h4,h5,h6{ font-weight: 700;color: var(--wc-dark);font-family: var(--wc-
 .wc-work-process-area{ background-repeat: repeat;background-image: url(images/shape/);}
 .wc-work-process-area .wc-process-step-wrapper .process-step-item{ position: relative;padding: 50px 30px;background-color: var(--wc-white);transition: all .3s ease-out 0s;border-radius: 6px;-ms-box-shadow: var(--wc-shadow-modern);-o-box-shadow: var(--wc-shadow-modern);box-shadow: var(--wc-shadow-modern);}
 .wc-work-process-area .wc-process-step-wrapper .process-step-item .process-step-image-01,.wc-work-process-area .wc-process-step-wrapper .process-step-item .process-step-image-02,.wc-work-process-area .wc-process-step-wrapper .process-step-item .process-step-image-03,.wc-work-process-area .wc-process-step-wrapper .process-step-item .process-step-image-04{ width: 150px;height: 150px;display: flex;align-items: center;justify-content: center;margin-bottom: 40px;margin-left: auto;margin-right: auto;background-size: cover;background-repeat: no-repeat;position: relative;border: 10px solid var(--wc-light);transition: all .3s ease-out 0s;border-radius: 50%;}
-.wc-work-process-area .wc-process-step-wrapper .process-step-item .process-step-image-01{ background-image: url(images/banner/sm-01.jpg);}
-.wc-work-process-area .wc-process-step-wrapper .process-step-item .process-step-image-02{ background-image: url(images/banner/sm-02.jpg);}
+.wc-work-process-area .wc-process-step-wrapper .process-step-item .process-step-image-01 { background-image: url(./assets/images/process/process-step-01.jpg);
+ }.wc-work-process-area .wc-process-step-wrapper .process-step-item .process-step-image-02{ background-image: url(images/banner/sm-02.jpg);}
 .wc-work-process-area .wc-process-step-wrapper .process-step-item .process-step-image-03{ background-image: url(images/banner/sm-03.jpg);}
 .wc-work-process-area .wc-process-step-wrapper .process-step-item .process-step-image-04{ background-image: url(images/banner/sm-04.jpg);}
 .wc-work-process-area .wc-process-step-wrapper .process-step-item .process-step-number-alt{ width: 35px;height: 35px;font-size: 13px;font-weight: 700;color: var(--wc-primary);background-color: var(--wc-brand);display: flex;align-items: center;justify-content: center;position: absolute;top: 10px;left: -12px;border-radius: 50%;transition: all .3s ease-out 0s;}
@@ -965,4 +965,97 @@ body .loader-wrapper .loader{ height: 5px;width: 200px;border-radius: 5px;--c: n
 .wc-shop-single-area .product-image .swiper-thumbs{ margin-top: 12px;}
 .wc-shop-single-area .product-image .swiper-thumbs .swiper-slide{ opacity: .5;cursor: pointer;border-radius: 4px;}
 .wc-shop-single-area .product-image .swiper-thumbs .swiper-slide.swiper-slide-thumb-active{ opacity: 1;background-color: var(--wc-light);}
+
+
+/* --- Brinex Style Work Process Section --- */
+
+.wc-work-process-area {
+  background-color: #f9fbfc;
+  padding: 100px 0;
+}
+
+.process-card {
+  background: #fff;
+  border: 1px solid #e6ebef;
+  border-radius: 12px;
+  padding: 30px 20px;
+  transition: all 0.4s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.process-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 140, 255, 0.15);
+}
+
+.process-circle {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  margin: 0 auto 25px;
+  position: relative;
+  overflow: hidden;
+  border: 6px solid #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.process-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.5s ease;
+}
+
+.process-card:hover .process-circle img {
+  transform: scale(1.1);
+}
+
+.process-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #d4ff00;
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.process-step-label {
+  background: #e9f3ff;
+  color: #0078ff;
+  font-weight: 600;
+  display: inline-block;
+  padding: 6px 18px;
+  border-radius: 4px;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.process-step-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #0b0b0b;
+}
+
+.process-step-desc {
+  font-size: 15px;
+  color: #6c757d;
+  line-height: 1.6;
+}
+
+.section-sub-title-alt {
+  font-weight: 600;
+  color: #0078ff;
+}
 
