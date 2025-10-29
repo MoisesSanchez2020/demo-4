@@ -212,7 +212,7 @@ h1,h2,h3,h4,h5,h6{ font-weight: 700;color: var(--wc-dark);font-family: var(--wc-
 .spy-scroll-nav .nav-link.active .spy-scroll-nav-text,.spy-scroll-nav .nav-link:hover .spy-scroll-nav-text{ color: var(--bs-primary);}
 .spy-scroll-nav .nav-link.active .spy-scroll-nav-icon,.spy-scroll-nav .nav-link:hover .spy-scroll-nav-icon{ opacity: 1;visibility: visible;transform: translateX(0);}
 .moving-particles-primary{ background-color: var(--bs-primary);}
-.wc-work-process-area{ background-repeat: repeat;background-image: url(images/shape/shape-aper-grid.jpg);}
+.wc-work-process-area{ background-repeat: repeat;background-image: url(images/shape/);}
 .wc-work-process-area .wc-process-step-wrapper .process-step-item{ position: relative;padding: 50px 30px;background-color: var(--wc-white);transition: all .3s ease-out 0s;border-radius: 6px;-ms-box-shadow: var(--wc-shadow-modern);-o-box-shadow: var(--wc-shadow-modern);box-shadow: var(--wc-shadow-modern);}
 .wc-work-process-area .wc-process-step-wrapper .process-step-item .process-step-image-01,.wc-work-process-area .wc-process-step-wrapper .process-step-item .process-step-image-02,.wc-work-process-area .wc-process-step-wrapper .process-step-item .process-step-image-03,.wc-work-process-area .wc-process-step-wrapper .process-step-item .process-step-image-04{ width: 150px;height: 150px;display: flex;align-items: center;justify-content: center;margin-bottom: 40px;margin-left: auto;margin-right: auto;background-size: cover;background-repeat: no-repeat;position: relative;border: 10px solid var(--wc-light);transition: all .3s ease-out 0s;border-radius: 50%;}
 .wc-work-process-area .wc-process-step-wrapper .process-step-item .process-step-image-01{ background-image: url(images/banner/sm-01.jpg);}

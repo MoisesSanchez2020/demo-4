@@ -7604,3 +7604,32 @@ body .loader-wrapper .loader {
 #about {
   background: linear-gradient(120deg, #589ef3 0%, #00c6ff 100%);
 }
+
+
+.process-step-image-01 { 
+    background-image: url(./assets/images/process/process-step-01.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
+
+.process-step-image-02 { 
+    background-image: url(./assets/images/process/process-step-02.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
+
+.process-step-image-03 { 
+    background-image: url(./assets/images/process/process-step-03.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
+
+.process-step-image-04 { 
+    background-image: url(./assets/images/process/process-step-04.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
