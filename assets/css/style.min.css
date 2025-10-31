@@ -175,7 +175,7 @@ h1,h2,h3,h4,h5,h6{ font-weight: 700;color: var(--wc-dark);font-family: var(--wc-
 .bg-blur-shape-03{ top: -200px;left: -250px;}
 .bg-blur-shape-04{ top: -200px;right: -250px;}
 .image-reveal-effect{ position: relative;overflow: hidden;}
-.image-reveal-effect:after{ z-index: 1;content: "";position: absolute;width: 200%;height: 0%;left: 50%;top: 50%;background-color: rgba(255,255,255,.3);transform: translate(-50%,-50%) rotate(-45deg);}
+.image-reveal-effect:after{ z-index: 1;content: "";position: absolute;width: 200%;height: 0%;left: 50%;top: 50%;background-color: rgb(255, 255, 255);transform: translate(-50%,-50%) rotate(-45deg);}
 .image-reveal-effect:hover:after{ height: 250%;background-color: transparent;transition: all 2s ease-out 0s;}
 .animation-circle{ animation: circle 15s linear infinite;}
 @keyframes circle{ 0%{  transform: rotate(0); }
@@ -1008,7 +1008,7 @@ body .loader-wrapper .loader{ height: 5px;width: 200px;border-radius: 5px;--c: n
   position: absolute;
   top: 12px;
   left: 12px;
-  background: #d4ff00;
+  background: #dfdfe0;
   color: #000;
   font-size: 14px;
   font-weight: 700;
@@ -1132,7 +1132,7 @@ body .loader-wrapper .loader{ height: 5px;width: 200px;border-radius: 5px;--c: n
   transform: translate(-50%, -50%);
   font-size: 26px;
   font-weight: 700;
-  color: #0078ff;
+  color: #0d0e0e;
 }
 
 .circle-progress-count i {
@@ -1148,4 +1148,53 @@ body .loader-wrapper .loader{ height: 5px;width: 200px;border-radius: 5px;--c: n
   display: none !important;
   visibility: hidden !important;
   pointer-events: none !important;
+}
+
+/* Disable all hover animations and blue overlays in Key Features section */
+.wc-key-features-area .key-feature-item-01::before,
+.wc-key-features-area .key-feature-item-02::before,
+.wc-key-features-area .key-feature-item-03::before,
+.wc-key-features-area .key-feature-item-04::before {
+  background: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* Remove hover effects */
+.wc-key-features-area .key-feature-item-01:hover::before,
+.wc-key-features-area .key-feature-item-02:hover::before,
+.wc-key-features-area .key-feature-item-03:hover::before,
+.wc-key-features-area .key-feature-item-04:hover::before,
+.wc-key-features-area .key-feature-item-01:hover .wc-key-features-link,
+.wc-key-features-area .key-feature-item-02:hover .wc-key-features-link,
+.wc-key-features-area .key-feature-item-03:hover .wc-key-features-link,
+.wc-key-features-area .key-feature-item-04:hover .wc-key-features-link,
+.wc-key-features-area .key-feature-item-01:hover .key-feature-icon,
+.wc-key-features-area .key-feature-item-02:hover .key-feature-icon,
+.wc-key-features-area .key-feature-item-03:hover .key-feature-icon,
+.wc-key-features-area .key-feature-item-04:hover .key-feature-icon {
+  opacity: 1 !important;
+  transform: none !important;
+  background: none !important;
+  transition: none !important;
+}
+
+/* Keep link visible always (no slide-up animation) */
+.wc-key-features-area .wc-key-features-link {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  transition: none !important;
+  background: transparent !important;
+  color: inherit !important;
+}
+
+
+/* Remove the blue background behind the arrow in Learn More links */
+.wc-key-features-area .wc-key-features-link .wc-key-features-link-icon {
+  background: transparent !important;
+  color: var(--wc-brand) !important; /* optional: keep the arrow blue, or change to black */
+  border: none !important;
 }
