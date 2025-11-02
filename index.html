@@ -465,20 +465,19 @@
     </style>
 
 
-
-   <!-- ========== Key Features Section (Clean Layout) ========== -->
-<div class="container-fluid py-5 px-5 wc-key-features-area">
+<!-- ========== Key Features Section (Compact Layout) ========== -->
+<div class="container-fluid py-4 px-5 wc-key-features-area">
   <div class="row g-0 text-start align-items-stretch">
     
     <!-- Box 1 -->
     <div class="col-12 col-sm-6 col-lg-3">
-      <div class="key-feature-item d-flex flex-column justify-content-center h-100 p-4 border-end border-light">
+      <div class="key-feature-item d-flex flex-column justify-content-center h-100 p-3 border-end border-light">
         <div class="key-feature-content d-flex align-items-start">
           <div class="key-feature-icon me-3">
-            <img src="./assets/images/icon/icon-01.svg" alt="Proactive Monitoring" class="img-fluid w-50px h-50px" />
+            <img src="./assets/images/icon/icon-02.svg" alt="Proactive Monitoring" class="img-fluid" />
           </div>
           <div>
-            <h5 class="fw-semibold mb-2">Proactive Monitoring & Automation</h5>
+            <h5 class="fw-semibold mb-1">Proactive Monitoring & Automation</h5>
             <p class="text-muted mb-0">
               Stay ahead of issues before they impact your business. Our systems track performance,
               detect anomalies, and resolve incidents automatically — 24/7.
@@ -490,13 +489,13 @@
 
     <!-- Box 2 -->
     <div class="col-12 col-sm-6 col-lg-3">
-      <div class="key-feature-item d-flex flex-column justify-content-center h-100 p-4 border-end border-light">
+      <div class="key-feature-item d-flex flex-column justify-content-center h-100 p-3 border-end border-light">
         <div class="key-feature-content d-flex align-items-start">
           <div class="key-feature-icon me-3">
-            <img src="./assets/images/icon/icon-02.svg" alt="Cloud Solutions" class="img-fluid w-50px h-50px" />
+            <img src="./assets/images/icon/icon-01.svg" alt="Cloud Solutions" class="img-fluid" />
           </div>
           <div>
-            <h5 class="fw-semibold mb-2">Cloud & Virtualization Made Simple</h5>
+            <h5 class="fw-semibold mb-1">Cloud & Virtualization Made Simple</h5>
             <p class="text-muted mb-0">
               Scale securely with hybrid and private cloud environments designed for flexibility,
               speed, and cost-efficiency. We handle migration, setup, and optimization.
@@ -508,13 +507,13 @@
 
     <!-- Box 3 -->
     <div class="col-12 col-sm-6 col-lg-3">
-      <div class="key-feature-item d-flex flex-column justify-content-center h-100 p-4 border-end border-light">
+      <div class="key-feature-item d-flex flex-column justify-content-center h-100 p-3 border-end border-light">
         <div class="key-feature-content d-flex align-items-start">
           <div class="key-feature-icon me-3">
-            <img src="./assets/images/icon/icon-03.svg" alt="Cybersecurity" class="img-fluid w-50px h-50px" />
+           <img src="./assets/images/icon/icon-03.svg" alt="Cybersecurity" class="img-fluid" />
           </div>
           <div>
-            <h5 class="fw-semibold mb-2">Cybersecurity & Compliance</h5>
+            <h5 class="fw-semibold mb-1">Cybersecurity & Compliance</h5>
             <p class="text-muted mb-0">
               Protect your business with next-gen threat detection, zero-trust security,
               and compliance frameworks that safeguard every layer of your network.
@@ -526,13 +525,13 @@
 
     <!-- Box 4 -->
     <div class="col-12 col-sm-6 col-lg-3">
-      <div class="key-feature-item d-flex flex-column justify-content-center h-100 p-4">
+      <div class="key-feature-item d-flex flex-column justify-content-center h-100 p-3">
         <div class="key-feature-content d-flex align-items-start">
           <div class="key-feature-icon me-3">
-            <img src="./assets/images/icon/icon-04.svg" alt="IT Consulting" class="img-fluid w-50px h-50px" />
+            <img src="./assets/images/icon/icon-04.svg" alt="IT Consulting" class="img-fluid" />
           </div>
           <div>
-            <h5 class="fw-semibold mb-2">IT Consulting & Strategy</h5>
+            <h5 class="fw-semibold mb-1">IT Consulting & Strategy</h5>
             <p class="text-muted mb-0">
               Partner with NouvaTech to align your technology roadmap with your business goals.
               From infrastructure planning to digital transformation, we guide your next smart move.
@@ -545,83 +544,78 @@
   </div>
 </div>
 
-<!-- ====== CSS STYLES ====== -->
 <style>
-/* Section background */
+/* Section layout — balanced spacing */
 .wc-key-features-area {
   background-color: #f5f9fb;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+  margin-top: -8px;
 }
 
-/* Feature box shape and layout */
+/* Feature boxes — compact but visually strong */
 .key-feature-item {
   background-color: #fff;
   border: 1px solid #e5e7eb;
-  min-height: 260px;
+  min-height: 175px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
-  box-sizing: border-box;
+  padding: 20px 18px !important;
+  transition: transform 0.25s ease;
 }
 
-/* Box spacing and width balance */
-.row > .col-12.col-sm-6.col-lg-3 {
-  flex: 1 1 25% !important;
-  max-width: 25% !important;
+.key-feature-item:hover {
+  transform: translateY(-3px);
 }
 
-/* Typography and spacing */
-.key-feature-content h5 {
-  font-size: 17px;
-  color: #111827;
-  line-height: 1.4;
-  font-weight: 600;
+/* Layout for icon + text */
+.key-feature-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
 }
 
-.key-feature-content p {
-  font-size: 15px;
-  color: #4b5563;
-  line-height: 1.55;
-  margin: 0;
-}
-/* ✅ Smaller, balanced icons for cleaner layout */
+/* Bigger icons for better visibility */
 .key-feature-icon img {
-  width: 140px !important;
-  height: 140px !important;
+  width: 95px !important;
+  height: 95px !important;
   object-fit: contain !important;
-  opacity: 1;
-  filter: brightness(0) saturate(100%) !important; /* keep them black */
+  filter: brightness(0) saturate(100%) !important;
+  opacity: 1 !important;
   transition: transform 0.3s ease;
 }
 
 .key-feature-item:hover .key-feature-icon img {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
-/* Make icons pure black (keep current size) */
-.key-feature-icon img {
-  filter: brightness(0) saturate(100%) !important; /* turns blue icons black */
-  opacity: 1 !important;
+/* Typography — slightly smaller to balance icon size */
+.key-feature-content h5 {
+  font-size: 16px;
+  color: #111827;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 4px;
 }
 
-
-/* Optional: subtle scale effect for better feel (not flashy) */
-.key-feature-item:hover .key-feature-icon img {
-  transform: scale(1.05);
+.key-feature-content p {
+  font-size: 14.2px;
+  color: #4b5563;
+  line-height: 1.45;
+  margin: 0;
 }
 
-/* Keep content aligned nicely */
-.key-feature-content {
-  display: flex;
-  align-items: flex-start;
-  gap: 15px;
-}
-
-/* Responsive design */
+/* Responsive adjustments */
 @media (max-width: 992px) {
   .row > .col-12.col-sm-6.col-lg-3 {
     flex: 1 1 50% !important;
     max-width: 50% !important;
+  }
+
+  .key-feature-icon img {
+    width: 75px !important;
+    height: 75px !important;
   }
 }
 
@@ -630,66 +624,23 @@
     flex: 1 1 100% !important;
     max-width: 100% !important;
   }
+
   .key-feature-item {
     border-right: none !important;
     border-bottom: 1px solid #e5e7eb;
-    padding: 20px !important;
+    padding: 18px !important;
   }
+
   .key-feature-content {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-/* ✅ Consistent small icon size across all devices and centered alignment */
-.key-feature-content {
-  display: flex;
-  align-items: center; /* centra verticalmente ícono y texto */
-  gap: 15px;
-}
-
-.key-feature-icon {
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Tamaño universal de íconos */
-.key-feature-icon img {
-  width: 58px !important;
-  height: 58px !important;
-  object-fit: contain !important;
-  opacity: 1;
-  filter: brightness(0) saturate(100%) !important; /* mantiene color negro */
-  transition: transform 0.3s ease;
-}
-
-/* Hover sutil */
-.key-feature-item:hover .key-feature-icon img {
-  transform: scale(1.08);
-}
-
-/* Ajustes responsive */
-@media (max-width: 992px) {
-  .key-feature-icon img {
-    width: 46px !important;
-    height: 46px !important;
-  }
-}
-
-@media (max-width: 600px) {
-  .key-feature-content {
-    flex-direction: row; /* mantiene el ícono al lado del texto */
+    flex-direction: row;
     align-items: flex-start;
   }
 
   .key-feature-icon img {
-    width: 44px !important;
-    height: 44px !important;
+    width: 60px !important;
+    height: 60px !important;
   }
 }
-
 </style>
 
 
@@ -700,158 +651,244 @@
 
 
 
-        </section>
-        <!--! ================================================================ !-->
-        <!--! End: Key Features Section !-->
-        <!--! ================================================================ !-->
-        <!--! ================================================================ !-->
-        <!--! Start: About Section !-->
-        <!--! ================================================================ !-->
-        <section class="wc-about-area common-section" style="background: linear-gradient(to bottom, #f9f9f9, #ffffff);" >
-            <style>
-    .wc-about-area a,
-    .wc-about-area h1,
-    .wc-about-area h2,
-    .wc-about-area h3,
-    .wc-about-area h4,
-    .wc-about-area h5,
-    .wc-about-area h6,
-    .wc-about-area p,
-    .wc-about-area span {
-      color: #000 !important;
+
+
+<!--! ================================================================ !-->
+<!--! Start: About Section !-->
+<!--! ================================================================ !-->
+<section class="wc-about-area common-section" style="background: linear-gradient(to bottom, #d4d0d0, #ffffff);">
+  <style>
+  /* Force dark text inside this section only */
+  .wc-about-area a,
+  .wc-about-area h1,
+  .wc-about-area h2,
+  .wc-about-area h3,
+  .wc-about-area h4,
+  .wc-about-area h5,
+  .wc-about-area h6,
+  .wc-about-area p,
+  .wc-about-area span {
+    color: #000 !important;
+  }
+
+  /* Add comfortable top/bottom padding for the section */
+  .wc-about-area {
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+    background: linear-gradient(to bottom, #f9fafc, #ffffff);
+  }
+
+  /* Grid alignment and spacing between columns */
+  .wc-about-area .row {
+    align-items: center;
+    gap: 60px 0 !important;
+  }
+
+  /* Equal column widths */
+  .wc-about-area .col-media,
+  .wc-about-area .col-copy {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  /* Add horizontal space between image and text */
+  .wc-about-area .col-media {
+    padding-right: 30px !important;
+  }
+
+  .wc-about-area .col-copy {
+    padding-left: 30px !important;
+  }
+
+  /* Image wrapper for badge positioning */
+  .about-figure {
+    position: relative;
+    display: block;
+  }
+
+  .about-figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+  }
+
+  /* 15+ badge styling */
+  .about-badge {
+    position: absolute;
+    right: -18px;
+    bottom: -18px;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    background: radial-gradient(closest-side, #e1dede 58%, rgba(255,255,255,0) 59%),
+                linear-gradient(180deg, #eef4fb 0%, #e6edf7 100%);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+    z-index: 1;
+    padding: 14px;
+    pointer-events: none;
+  }
+
+  .about-badge .num {
+    font-family: var(--wc-ff-number, ui-sans-serif, system-ui);
+    font-weight: 800;
+    line-height: 1;
+    font-size: clamp(36px, 6vw, 60px);
+    color: var(--wc-theme-primary, #0b6efd);
+    display: block;
+  }
+
+  .about-badge .txt {
+    margin-top: 6px;
+    font-size: 15px;
+    line-height: 1.25;
+    color: #111;
+  }
+
+  /* List icons */
+  .wc-about-list-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+  }
+
+  .wc-about-list-icon img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    filter: brightness(0) saturate(100%) !important;
+  }
+
+  /* Responsive spacing and layout */
+  @media (max-width: 992px) {
+    .wc-about-area {
+      padding-top: 70px !important;
+      padding-bottom: 70px !important;
     }
-  </style>
 
+    .wc-about-area .col-media,
+    .wc-about-area .col-copy {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
 
+    /* Center badge below image */
+    .about-badge {
+      position: static;
+      margin: 30px auto 0;
+      width: 200px;
+      height: 200px;
+    }
 
+    /* Reduce gap between sections on mobile */
+    .wc-about-area .row {
+      gap: 40px 0 !important;
+    }
+  }
 
-            <div class="container position-relative z-2">
-                <!-- start about row -->
-                <div class="row g-0">
-                    <!-- start left col -->
-                    <div class="wc-about-experience-col col-lg-6 col-xxl-5 mb-5 mb-lg-0">
-                        <figure class="image-reveal-effect">
-                            <img src="./assets/images/general/img-meeting.jpg"
-                                class="image-reveal rounded-2 w-100 h-100" alt="..." />
-                        </figure>
-                        <div class="wc-about-experience-wrap">
-                            <figure class="wc-experience-figure" data-parallax='{"y": 120, "smoothness": 20}'>
-                                <span class="fs-40px fs-sm-50px fs-md-60px fw-800 tx-theme-primary d-block lh-base z-2"
-                                    style="font-family: var(--wc-ff-number)">15+</span>
-                                <h5 class="fs-16px fs-sm-20px tx-theme-primary mb-0 z-2 max-w-200px">Years working
-                                    experiences.</h5>
-                            </figure>
-                        </div>
-                    </div>
-                    <!-- end left col -->
+  @media (max-width: 576px) {
+    .wc-about-area {
+      padding-top: 50px !important;
+      padding-bottom: 50px !important;
+    }
 
+    .wc-about-list-icon {
+      width: 60px;
+      height: 60px;
+    }
 
-
-                    <!-- start right col -->
-                    <div class="col-lg-6 col-xxl-5 offset-xxl-2 ps-0 ps-lg-5 ps-xxl-0">
-                        <h6 class="section-sub-title" data-cue="slideInUp">About Our Company</h6>
-                        <h2 class="section-title mb-4" data-cursor="-opaque" data-splitting>
-                            Smart, Secure, and <span class="text-highlight">Scalable <span class="text-highlight-bg"
-                                    data-cue="slideInUp" data-duration="800" data-delay="800"></span></span> IT
-                            solutions.
-                        </h2>
-                        <p class="mb-5 line-clamp line-clamp-3" data-cue="slideInUp">At <strong>NouvaTech</strong>,
-                            we’re redefining managed IT by combining innovation, automation, and
-                            security-first thinking. Our mission is to help businesses stay agile, resilient, and ready
-                            for tomorrow’s challenges.</p>
-                        <div class="wc-about-list-item d-flex gap-4 mb-4" data-cue="slideInUp">
-                            <div
-                                class="wc-about-list-icon p-4 w-90px h-90px d-flex flex-shrink-0 align-items-center justify-content-center rounded bg-theme-light">
-                                <img src="./assets/images/icon/icon-04.svg" alt="" class="img-fluid" />
-                            </div>
-                            <div class="flex-grow-1">
-                                <h5>Proactive Monitoring & Automation</h5>
-                                <p class="fs-16px line-clamp line-clamp-2">We detect and resolve issues before they
-                                    impact operations—ensuring maximum uptime
-                                    and reliability for your entire infrastructure.</p>
-                            </div>
-                        </div>
-                        <div class="wc-about-list-item d-flex gap-4" data-cue="slideInUp">
-                            <div
-                                class="wc-about-list-icon p-4 w-90px h-90px d-flex flex-shrink-0 align-items-center justify-content-center rounded bg-theme-light">
-                                <img src="./assets/images/icon/icon-03.svg" alt="" class="img-fluid" />
-                            </div>
-                            <div class="flex-grow-1">
-                                <h5>Cloud & Cybersecurity Expertise</h5>
-                                <p class="fs-16px line-clamp line-clamp-2">From cloud migration to zero-trust
-                                    frameworks, we build secure, scalable, and
-                                    compliant IT environments that empower growth.</p>
-                            </div>
-                        </div>
-                        <hr class="mb-0 mt-4 mt-xl-5" />
-                        <div class="d-flex align-items-center gap-4" data-cue="slideInUp">
-                            <!-- start about us button -->
-                            <div class="py-4 flex-sm-shrink-0">
-                                <a href="./about-v-01.html" class="wc-btn wc-btn-primary">
-                                    <span class="wc-btn-text">Contact Us</span>
-                                    <span class="wc-btn-icon"><i class="fi fi-rr-arrow-up-right"></i></span>
-                                </a>
-                            </div>
-                            <!-- end about us button -->
-                            <span class="vr d-none d-sm-flex"></span>
-                            <!-- start call button -->
-                            <div class="py-4 flex-sm-shrink-0 d-none d-sm-block d-lg-none d-xl-block">
-                                <a href="tel:+1.630-292-3780" class="d-flex align-items-center gap-3">
-                                    <span class="wc-btn wc-btn-light wc-btn-icon flex-shrink-0">
-                                        <i class="fi fi-rr-phone-call"></i>
-                                    </span>
-                                    <span class="flex-grow-1">
-                                        <span class="fs-12px d-block text-uppercase text-muted mb-1">call Us</span>
-                                        <span class="fs-20px fw-800 tx-theme-primary ff-number"> 877-824-7272</span>
-                                    </span>
-                                </a>
-                            </div>
-                            <!-- end call button -->
-                        </div>
-                    </div>
-                    <!-- end right col -->
-                </div>
-                <!-- end about row -->
-
-      <style>
-/* --- Make the About section fit naturally within its container --- */
-
-/* Let the row expand and align items vertically */
-.wc-about-area .row.g-0 {
-  display: flex !important;
-  align-items: center !important;  /* vertically center image + text */
-  justify-content: space-between;
-  flex-wrap: wrap;
-  min-height: 100vh; /* full visible section height */
-  padding: 60px 0;   /* top/bottom breathing space */
-}
-
-/* Make columns share equal height and align cleanly */
-.wc-about-experience-col,
-.col-lg-6.col-xxl-5.offset-xxl-2 {
-  display: flex !important;
-  flex-direction: column;
-  justify-content: center;
-}
-
-/* Ensure text doesn't overflow and wraps properly */
-.wc-about-area p {
-  white-space: normal !important;
-  overflow: visible !important;
-  text-overflow: unset !important;
-}
-
-/* Adjust the circle size and placement around “15+” */
-.wc-about-experience-wrap {
-  position: relative;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-.wc-experience-figure {
-  margin: 0 auto;
-  text-align: center;
-}
+    .wc-about-list-icon img {
+      width: 30px;
+      height: 30px;
+    }
+  }
 </style>
+
+
+  <div class="container position-relative z-2">
+    <div class="row g-0">
+      <!-- Left: Image -->
+      <div class="col-media col-lg-6 mb-5 mb-lg-0">
+        <figure class="about-figure">
+          <img src="./assets/images/general/img-meeting.jpg" alt="NouvaTech team meeting">
+          <div class="about-badge">
+            <span class="num">15+</span>
+            <div class="txt">Years working<br>experiences.</div>
+          </div>
+        </figure>
+      </div>
+
+      <!-- Right: Copy -->
+      <div class="col-copy col-lg-6 ps-0 ps-lg-5">
+        <h6 class="section-sub-title" data-cue="slideInUp">About Our Company</h6>
+        <h2 class="section-title mb-4" data-cursor="-opaque" data-splitting>
+          Smart, Secure, and <span class="text-highlight">Scalable
+          <span class="text-highlight-bg" data-cue="slideInUp" data-duration="800" data-delay="800"></span></span> IT solutions.
+        </h2>
+
+        <p class="mb-4" data-cue="slideInUp">
+          At <strong>NouvaTech</strong>, we’re redefining managed IT by combining innovation,
+          automation, and security-first thinking. Our mission is to help businesses stay agile,
+          resilient, and ready for tomorrow’s challenges.
+        </p>
+
+        <!-- Item 1 -->
+        <div class="wc-about-list-item d-flex gap-3 mb-3" data-cue="slideInUp">
+          <div class="wc-about-list-icon p-3 d-flex align-items-center justify-content-center bg-theme-light">
+            <img src="./assets/images/icon/icon-04.svg" alt="Automation">
+          </div>
+          <div>
+            <h5 class="mb-1">Proactive Monitoring & Automation</h5>
+            <p class="mb-0">We detect and resolve issues before they impact operations—ensuring maximum uptime and reliability across your infrastructure.</p>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="wc-about-list-item d-flex gap-3" data-cue="slideInUp">
+          <div class="wc-about-list-icon p-3 d-flex align-items-center justify-content-center bg-theme-light">
+            <img src="./assets/images/icon/icon-03.svg" alt="Cloud & Security">
+          </div>
+          <div>
+            <h5 class="mb-1">Cloud & Cybersecurity Expertise</h5>
+            <p class="mb-0">From cloud migration to zero-trust frameworks, we build secure, scalable, and compliant IT environments that empower growth.</p>
+          </div>
+        </div>
+
+        <hr class="mb-0 mt-4">
+
+        <div class="d-flex align-items-center gap-4 mt-3" data-cue="slideInUp">
+          <div class="flex-shrink-0">
+            <a href="./about-v-01.html" class="wc-btn wc-btn-primary">
+              <span class="wc-btn-text">Contact Us</span>
+              <span class="wc-btn-icon"><i class="fi fi-rr-arrow-up-right"></i></span>
+            </a>
+          </div>
+          <span class="vr d-none d-sm-flex"></span>
+          <div class="flex-shrink-0 d-none d-sm-block d-lg-none d-xl-block">
+            <a href="tel:+1.630-292-3780" class="d-flex align-items-center gap-3">
+              <span class="wc-btn wc-btn-light wc-btn-icon flex-shrink-0">
+                <i class="fi fi-rr-phone-call"></i>
+              </span>
+              <span>
+                <span class="fs-12px d-block text-uppercase text-muted mb-1">Call Us</span>
+                <span class="fs-20px fw-800 tx-theme-primary ff-number"> 877-824-7272</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- /Right -->
+    </div>
+  </div>
+</section>
+<!--! ================================================================ !-->
+<!--! End: About Section !-->
+<!--! ================================================================ !-->
+
+
 
 
             </div>
@@ -2470,7 +2507,7 @@ United States</a></h6>
 
     <!-- Certifications Row -->
     <div class="footer-certifications text-center mb-4">
-      <h6 class="fw-700 text-dark mb-4">Proudly Certified & Partnered</h6>
+      <h6 class="fw-700 text-dark mb-4"></h6>
       <div class="d-flex flex-wrap justify-content-center align-items-center cert-row">
         <div class="cert-item">
           <img src="./assets/images/footer/eeo-removebg-preview.png" alt="EEO Employer" class="cert-logo">
@@ -2568,7 +2605,7 @@ United States</a></h6>
   }
 
   .cert-logo {
-    height: 60px;
+    height: 70px;
     width: auto;
     object-fit: contain;
     filter: grayscale(0.4);
@@ -2611,87 +2648,7 @@ United States</a></h6>
 <!-- End: Footer Area -->
 <!-- ================================================================ -->
 
-<!-- ================================================================ -->
-<!-- End: Footer Area -->
-<!-- ================================================================ -->
-
-<!-- ================================================================ -->
-<!-- End: Footer Area -->
-<!-- ================================================================ -->
-
-<!-- ================================================================ -->
-<!-- End: Footer Area -->
-<!-- ================================================================ -->
-
-            <!-- end wc-contact-info -->
-            <!--<hr class="my-40px" style="border-top-style: dashed" />
-            <div class="wc-instagram-feed row row-cols-2 g-2">
-                <h6 class="col-12 fs-16px fw-700 text-uppercase mb-4">Instagram:</h6>
-                <a href="" class="col">
-                    <figure class="wc-instagram-feed-image">
-                        <img src="./assets/images/banner/sm-01.jpg" alt="" class="img-fluid" />
-                        <span class="wc-instagram-feed-icon"><i class="fi fi-brands-instagram"></i></span>
-                    </figure>
-                </a>
-                <a href="" class="col">
-                    <figure class="wc-instagram-feed-image">
-                        <img src="./assets/images/banner/sm-02.jpg" alt="" class="img-fluid" />
-                        <span class="wc-instagram-feed-icon"><i class="fi fi-brands-instagram"></i></span>
-                    </figure>
-                </a>
-                <a href="" class="col">
-                    <figure class="wc-instagram-feed-image">
-                        <img src="./assets/images/banner/sm-03.jpg" alt="" class="img-fluid" />
-                        <span class="wc-instagram-feed-icon"><i class="fi fi-brands-instagram"></i></span>
-                    </figure>
-                </a>
-                <a href="" class="col">
-                    <figure class="wc-instagram-feed-image">
-                        <img src="./assets/images/banner/sm-04.jpg" alt="" class="img-fluid" />
-                        <span class="wc-instagram-feed-icon"><i class="fi fi-brands-instagram"></i></span>
-                    </figure>
-                </a>
-                <a href="" class="col">
-                    <figure class="wc-instagram-feed-image">
-                        <img src="./assets/images/banner/sm-05.jpg" alt="" class="img-fluid" />
-                        <span class="wc-instagram-feed-icon"><i class="fi fi-brands-instagram"></i></span>
-                    </figure>
-                </a>
-                <a href="" class="col">
-                    <figure class="wc-instagram-feed-image">
-                        <img src="./assets/images/banner/sm-06.jpg" alt="" class="img-fluid" />
-                        <span class="wc-instagram-feed-icon"><i class="fi fi-brands-instagram"></i></span>
-                    </figure>
-                </a>
-            </div>-->
-   
-            <!-- start wc-social-links -->
-            <!--<div class="wc-social-links">
-                <h6 class="fs-13px fw-700 text-uppercase mb-4">Follow Us:</h6>
-                <div class="d-flex align-items-center gap-2">
-                    <a href="javascript:void(0);"
-                        class="p-3 w-45px h-45px bg-theme-light rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
-                        <i class="fi fi-brands-facebook"></i>
-                    </a>
-                    <a href="javascript:void(0);"
-                        class="p-3 w-45px h-45px bg-theme-light rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
-                        <i class="fi fi-brands-twitter"></i>
-                    </a>
-                    <a href="javascript:void(0);"
-                        class="p-3 w-45px h-45px bg-theme-light rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
-                        <i class="fi fi-brands-linkedin"></i>
-                    </a>
-                    <a href="javascript:void(0);"
-                        class="p-3 w-45px h-45px bg-theme-light rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
-                        <i class="fi fi-brands-youtube"></i>
-                    </a>
-                    <a href="javascript:void(0);"
-                        class="p-3 w-45px h-45px bg-theme-light rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
-                        <i class="fi fi-brands-dribbble"></i>
-                    </a>
-                </div>
-            </div>-->
-            <!-- end wc-social-links-->
+           
         </div>
     </div>
 
