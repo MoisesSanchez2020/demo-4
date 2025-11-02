@@ -64,7 +64,7 @@
         <!--! Start: Topbar !-->
         <!--! ================================================================ !-->
         <!-- start header-topbar -->
-        <div class="wc-header-topbar" style="background:#4f8be5; color:#fff;">
+        <div class="wc-header-topbar" style="background:#011532; color:#fff;">
             <div class="container-fluid d-flex align-items-center justify-content-center justify-content-lg-between">
                 <!-- start header-topbar-left -->
                 <div class="header-topbar-left d-none d-lg-flex">
@@ -177,43 +177,94 @@
       </div>
       <!-- end wc-main-menu-wrapper -->
 
-      <!-- start wc-header-extra -->
-      <div class="wc-header-extra">
-        <div class="wc-header-button-group">
-          <div class="wc-header-search-offcanvas">
-            <a href="javascript:void(0);" class="wc-btn wc-btn-icon wc-btn-icon-sm wc-btn-light"
-              data-bs-toggle="offcanvas" data-bs-target="#searchCanvas">
-              <i class="fi fi-rr-search"></i>
-            </a>
-          </div>
 
-          <div class="wc-header-info-offcanvas">
-            <a href="javascript:void(0);" class="wc-btn wc-btn-icon wc-btn-icon-sm wc-btn-light"
-              data-bs-toggle="offcanvas" data-bs-target="#InfoCanvas">
-              <i class="fi fi-rr-grid"></i>
-            </a>
-          </div>
 
-          <div class="d-none d-xxl-flex">
-            <a href="tel:+16302923780" class="wc-header-call-btn">
-              <span class="wc-btn wc-btn-light wc-btn-icon wc-btn-icon-sm flex-shrink-0">
-                <i class="fi fi-rr-phone-call"></i>
-              </span>
-              <span class="wc-call-btn-text flex-grow-1">
-                <span class="wc-call-btn-text-top d-block text-uppercase">For Free Consultation</span>
-                <span class="wc-call-btn-number">+1.630-292-3780</span>
-              </span>
-            </a>
-          </div>
 
-          <div class="wc-header-menu-toggler d-lg-none">
-            <a href="javascript:void(0);" class="wc-btn wc-btn-icon wc-btn-icon-sm wc-btn-light">
-              <i class="fi fi-rr-menu-burger fs-24px"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- end wc-header-extra -->
+<!-- start wc-header-extra -->
+<div class="wc-header-extra">
+  <div class="wc-header-button-group d-flex align-items-center">
+
+    <!-- Phone Number -->
+    <div class="d-none d-xxl-flex align-items-center me-3">
+      <a href="tel:+18778247272" class="wc-header-call-btn d-flex align-items-center text-decoration-none">
+        <span class="wc-btn wc-btn-light wc-btn-icon wc-btn-icon-sm flex-shrink-0 me-2">
+          <i class="fi fi-rr-phone-call"></i>
+        </span>
+        <span class="wc-call-btn-text">
+          <span class="wc-call-btn-text-top d-block text-uppercase small text-muted">For Free Consultation</span>
+          <span class="wc-call-btn-number fw-bold text-primary">877-824-7272</span>
+        </span>
+      </a>
+    </div>
+
+    <!-- Get a Tech Evaluation Button -->
+    <div class="d-none d-xl-flex align-items-center ms-2">
+      <a href="#contact" class="get-eval-btn">
+        <i class="fi fi-rr-laptop me-2"></i> Get a Tech Evaluation
+      </a>
+    </div>
+
+    <!-- Mobile Menu Icon -->
+    <div class="wc-header-menu-toggler d-lg-none ms-2">
+      <a href="javascript:void(0);" class="wc-btn wc-btn-icon wc-btn-icon-sm wc-btn-light">
+        <i class="fi fi-rr-menu-burger fs-24px"></i>
+      </a>
+    </div>
+
+  </div>
+</div>
+<!-- end wc-header-extra -->
+
+
+
+<style>
+    /* 🔹 Get a Tech Evaluation Button */
+.get-eval-btn {
+  background: linear-gradient(90deg, #0073ff 0%, #0098ff 100%);
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 115, 255, 0.25);
+}
+
+.get-eval-btn:hover {
+  background: linear-gradient(90deg, #005ed1 0%, #0080e5 100%);
+  box-shadow: 0 6px 16px rgba(0, 115, 255, 0.35);
+  transform: translateY(-2px);
+}
+
+/* 🔹 Layout alignment */
+.wc-header-extra {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.wc-header-call-btn .wc-call-btn-number {
+  font-size: 16px;
+  color: #0073ff;
+}
+
+.wc-header-call-btn .wc-call-btn-text-top {
+  font-size: 11px;
+  color: #666;
+}
+
+</style>
+<!-- end wc-header-extra -->
+
+
+
+
+
+
+      
     </div>
   </div>
   <!-- end wc-header-main -->
@@ -364,17 +415,32 @@
         <!-- end wc-slide-item -->
     </div>
     <!-- end wc-slick-slider -->
-
-    <!-- start wc-slider-progress-container -->
-    <div class="wc-slider-progress-container">
-        <div class="wc-slider-number">
-            <span id="wc-current">01</span>
-            <div class="wc-slider-progress">
-                <div class="wc-slider-progress-bar"></div>
-            </div>
-            <span id="wc-total">03</span>
-        </div>
+<!-- start wc-slider-progress-container -->
+<!-- start wc-slider-progress-container -->
+<div class="wc-slider-progress-container" style="
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 30px;
+  padding: 6px 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+">
+  <div class="wc-slider-number d-flex align-items-center gap-2">
+    <span id="wc-current" style="font-weight:700; color:#0073ff;">01</span>
+    <div class="wc-slider-progress" style="width:80px; height:5px; background:#e6ebf2; border-radius:4px; overflow:hidden;">
+      <div class="wc-slider-progress-bar" style="width:33%; height:100%; background:linear-gradient(90deg,#0073ff,#00a8ff); transition:width 0.3s ease;"></div>
     </div>
+    <span id="wc-total" style="font-weight:600; color:#777;">03</span>
+  </div>
+</div>
+<!-- end wc-slider-progress-container -->
+
+<!-- end wc-slider-progress-container -->
+
+<!-- end wc-slider-progress-container -->
+
     <!-- end wc-slider-progress-container -->
 
     <!-- Removed this section to prevent collapse -->
@@ -706,7 +772,7 @@
                                     </span>
                                     <span class="flex-grow-1">
                                         <span class="fs-12px d-block text-uppercase text-muted mb-1">call Us</span>
-                                        <span class="fs-20px fw-800 tx-theme-primary ff-number">+1.630-292-3780 </span>
+                                        <span class="fs-20px fw-800 tx-theme-primary ff-number"> 877-824-7272</span>
                                     </span>
                                 </a>
                             </div>
@@ -1361,201 +1427,301 @@
 
 
 
-
-    
-
-        <!--! ================================================================ !-->
-<!--! Start: About Us Section !-->
-<!--! ================================================================ !-->
+<!-- ================================================================ -->
+<!-- Start: About Us Section -->
+<!-- ================================================================ -->
 <section id="about" class="common-section" style="background-color: #d4e2ee; color: #000;">
-
-<style>
-    #about * {
-      color: #4f4949 !important;
+  <style>
+    #about {
+      background: linear-gradient(180deg, #d8e4f1 0%, #edf3f8 100%);
+      padding: 80px 0;
     }
-    #about h1,
-    #about h2,
-    #about h3,
-    #about h4,
-    #about h5,
-    #about h6,
-    #about p,
-    #about span,
-    #about a,
-    #about li {
-      color: #000 !important;
+    #about .section-sub-title-alt {
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #0073ff;
+      letter-spacing: 1px;
+    }
+    #about .section-title {
+      font-weight: 800;
+      font-size: 36px;
+      color: #1b1b1b;
+    }
+    #about p {
+      color: #333;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+    #about ul.about-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 25px;
+    }
+    #about ul.about-list li {
+      background: #fff;
+      border-radius: 12px;
+      padding: 14px 18px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+    }
+    #about ul.about-list li:hover {
+      transform: translateY(-3px);
+    }
+    #about ul.about-list li i {
+      background: #0073ff;
+      color: #fff;
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 12px;
+      font-size: 14px;
     }
   </style>
 
-
-
-
-
-
-  
-
-
   <div class="container position-relative z-2">
-    <div class="row align-items-center g-4 g-xl-5">
+    <div class="row align-items-center g-5">
       
       <!-- Left Column (Image) -->
-      <div class="col-lg-6 col-xxl-5 position-relative">
-        <figure class="position-relative h-100 overflow-hidden rounded shadow">
+      <div class="col-lg-6">
+        <figure class="position-relative overflow-hidden rounded shadow">
           <img 
             src="./assets/images/general/img-meeting.jpg" 
-            class="w-0 img-fluid object-fit-cover" 
+            class="img-fluid rounded" 
             alt="NouvaTech Team in Meeting" />
         </figure>
       </div>
 
       <!-- Right Column (Content) -->
-      <div class="col-lg-6 col-xxl-6">
+      <div class="col-lg-6">
         <div class="section-header mb-0">
-          <h6 class="section-sub-title-alt text-uppercase" data-cue="slideInUp">About Us</h6>
-          <h2 class="section-title mb-4" data-cursor="-opaque" data-splitting>
-            Our <span class="text-highlight">Company</span>
-          </h2>
-          <p class="mb-4" data-cue="slideInUp">
-            <strong>NouvaTech, Inc.</strong> is a minority-owned business based in San Juan & Humacao, Puerto Rico,
-            specializing in <strong>Software Development, IT Consulting, and Cloud Solutions</strong>.
-            We bring together deep technical expertise and business insight to deliver transformative technology solutions 
-            for clients across industries.
+          <h6 class="section-sub-title-alt">About Us</h6>
+          <h2 class="section-title mb-4">Our <span class="text-highlight">Company</span></h2>
+
+          <p class="mb-4">
+            <strong>NouvaTech, Inc.</strong> is a <strong>family-owned business</strong> based in San Juan, Puerto Rico 
+            with offices in <strong>Arizona, California, and Iowa</strong>, specializing in 
+            <strong>Managed IT Services, Software Development, IT Consulting, and Cloud Solutions.</strong> 
+            We bring together deep technical expertise and business insight to deliver transformative 
+            technology solutions for clients across industries.
           </p>
-          <p class="mb-4" data-cue="slideInUp">
+
+          <p class="mb-4">
             Our core services include Microsoft Dynamics 365 implementations, Azure and AWS infrastructure management, 
-            mobile platform development, and software testing. We also offer <strong>hosted Software-as-a-Service (SaaS)</strong> 
+            mobile platform development, and software testing. We also offer hosted <strong>Software-as-a-Service (SaaS)</strong> 
             solutions and system integrations powered by secure cloud architectures.
           </p>
-          <p class="mb-4" data-cue="slideInUp">
-            At NouvaTech, we partner with leading technology providers such as <strong>Microsoft, MRC 360, and Cloud Titan</strong> 
-            to deliver enterprise-grade results for both government and private organizations. Our proven track record in digital transformation, 
-            automation, and security ensures clients stay agile, compliant, and ready for tomorrow.
+
+          <p class="mb-4">
+            At NouvaTech, we partner with leading technology providers such as 
+            <strong>Microsoft, and Cloud Titan</strong> to deliver enterprise-grade results for both 
+            government and private organizations. Our proven track record in digital transformation, automation, 
+            and cybersecurity ensures clients stay agile, compliant, and ready for tomorrow.
           </p>
         </div>
 
-        <!-- Key Strengths List -->
-        <ul class="list-unstyled fw-600 fs-16px text-dark d-flex flex-column gap-3 mt-4">
-          <li>
-            <span class="text-primary fs-16px me-3 p-2 bg-theme-light rounded-pill d-inline-flex align-items-center justify-content-center">✔</span>
-            Industry-leading expertise and technical excellence
-          </li>
-          <li>
-            <span class="text-primary fs-16px me-3 p-2 bg-theme-light rounded-pill d-inline-flex align-items-center justify-content-center">✔</span>
-            Tailored IT solutions designed for business scalability
-          </li>
-          <li>
-            <span class="text-primary fs-16px me-3 p-2 bg-theme-light rounded-pill d-inline-flex align-items-center justify-content-center">✔</span>
-            Proven success across public and private sectors
-          </li>
-          <li>
-            <span class="text-primary fs-16px me-3 p-2 bg-theme-light rounded-pill d-inline-flex align-items-center justify-content-center">✔</span>
-            Commitment to innovation, security, and reliability
-          </li>
+        <!-- Key Strengths (Modern List) -->
+        <ul class="about-list">
+          <li><i class="fi fi-rr-bulb"></i> Industry-leading expertise and technical excellence</li>
+          <li><i class="fi fi-rr-chart-histogram"></i> Tailored IT solutions designed for business scalability</li>
+          <li><i class="fi fi-rr-briefcase"></i> Proven success across public and private sectors</li>
+          <li><i class="fi fi-rr-shield-check"></i> Commitment to innovation, security, and reliability</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
-<!--! ================================================================ !-->
-<!--! End: About Us Section !-->
-<!--! ================================================================ !-->
+<!-- ================================================================ -->
+<!-- End: About Us Section -->
+<!-- ================================================================ -->
 
+<!-- ================================================================ -->
+<!-- Start: Our Locations Section -->
+<!-- ================================================================ -->
+<section id="locations" class="common-section" style="background-color: #f5f8fb; color: #000;">
+  <style>
+    #locations {
+      padding: 90px 0;
+      text-align: center;
+    }
 
+    #locations .section-sub-title {
+      color: #0073ff;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
 
+    #locations .section-title {
+      font-size: 34px;
+      font-weight: 800;
+      color: #1b1b1b;
+      margin-bottom: 45px;
+    }
 
+    .location-card {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      transition: all 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
 
+    .location-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    }
 
+    .location-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
 
+    .location-card .card-body {
+      padding: 25px 20px;
+    }
 
+    .location-card h5 {
+      font-weight: 800;
+      color: #000;
+      font-size: 20px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
 
+    .location-card p {
+      color: #555;
+      font-size: 15px;
+      margin-bottom: 0;
+      line-height: 1.6;
+    }
 
-        <!--! ================================================================ !-->
-        <!--! Start: Marquee !-->
-        <!--! ================================================================ !-->
-        <div class="wc-marquee-slider-brand">
-            <div class="container-fluid overflow-hidden">
-                <!-- start marquee-slider -->
-                <div class="marquee-slider marquee-right-to-left marquee-slow">
-                    <!-- start marquee-group -->
-                    <div class="marquee-group bg-dot-style">
-                        <!-- start marquee-item -->
-                        <div class="marquee-item">
-                            <figure class="marquee-icon"></figure>
-                            <span class="marquee-text">Creative Agency</span>
-                        </div>
-                        <div class="marquee-item">
-                            <figure class="marquee-icon"></figure>
-                            <span class="marquee-text">Business Strategy</span>
-                        </div>
-                        <div class="marquee-item">
-                            <figure class="marquee-icon"></figure>
-                            <span class="marquee-text">Expert Consulting</span>
-                        </div>
-                        <div class="marquee-item">
-                            <figure class="marquee-icon"></figure>
-                            <span class="marquee-text">Corporate Solutions</span>
-                        </div>
-                        <div class="marquee-item">
-                            <figure class="marquee-icon"></figure>
-                            <span class="marquee-text">Branding Studio</span>
-                        </div>
-                        <div class="marquee-item">
-                            <figure class="marquee-icon"></figure>
-                            <span class="marquee-text">Success Coaching</span>
-                        </div>
-                        <div class="marquee-item">
-                            <figure class="marquee-icon"></figure>
-                            <span class="marquee-text">Project Planning</span>
-                        </div>
-                        <div class="marquee-item">
-                            <figure class="marquee-icon"></figure>
-                            <span class="marquee-text">Strategic Growth</span>
-                        </div>
-                    </div>
-                    <!-- end marquee-group -->
-                    <!-- Duplicate group for seamless looping -->
-                    <div class="marquee-group bg-dot-style">
-                        <div class="marquee-item">
-                            <figure class="marquee-icon"></figure>
-                            <span class="marquee-text">Creative Agency</span>
-                        </div>
-                        <div class="marquee-item">
-                            <figure class="marquee-icon"></figure>
-                            <span class="marquee-text">Business Strategy</span>
-                        </div>
-                        <div class="marquee-item">
-                            <figure class="marquee-icon"></figure>
-                            <span class="marquee-text">Expert Consulting</span>
-                        </div>
-                        <div class="marquee-item">
-                            <figure class="marquee-icon"></figure>
-                            <span class="marquee-text">Corporate Solutions</span>
-                        </div>
-                        <div class="marquee-item">
-                            <figure class="marquee-icon"></figure>
-                            <span class="marquee-text">Branding Studio</span>
-                        </div>
-                        <div class="marquee-item">
-                            <figure class="marquee-icon"></figure>
-                            <span class="marquee-text">Success Coaching</span>
-                        </div>
-                        <div class="marquee-item">
-                            <figure class="marquee-icon"></figure>
-                            <span class="marquee-text">Project Planning</span>
-                        </div>
-                        <div class="marquee-item">
-                            <figure class="marquee-icon"></figure>
-                            <span class="marquee-text">Strategic Growth</span>
-                        </div>
-                    </div>
-                    <!-- end marquee-group -->
-                </div>
-                <!-- end marquee-slider -->
-            </div>
+    .location-card .phone {
+      margin-top: 12px;
+      font-weight: 600;
+      color: #0073ff;
+    }
+
+    @media (max-width: 768px) {
+      .location-card img {
+        height: 180px;
+      }
+    }
+  </style>
+
+  <div class="container">
+    <h6 class="section-sub-title">Our Offices</h6>
+    <h2 class="section-title">Proudly Serving Clients Across the U.S. & Caribbean</h2>
+
+    <div class="row g-4 justify-content-center">
+
+      <!-- New Mexico -->
+      <div class="col-md-6 col-lg-3">
+        <div class="location-card">
+          <img src="./assets/images/location/Albuquerque.jpg" alt="NouvaTech New Mexico Office">
+          <div class="card-body">
+            <h5>New Mexico</h5>
+            <p>6801 Jefferson St. NE Ste 150 PMB 3134<br>
+            Albuquerque, NM 87109</p>
+            <p class="phone">Main Line: 877-824-7272</p>
+          </div>
         </div>
-        <!--! ================================================================ !-->
-        <!--! End: Marquee !-->
-        <!--! ================================================================ !-->
+      </div>
+
+      <!-- Puerto Rico -->
+      <div class="col-md-6 col-lg-3">
+        <div class="location-card">
+          <img src="./assets/images/location/puertorico.jpg" alt="NouvaTech Puerto Rico Office">
+          <div class="card-body">
+            <h5>Puerto Rico</h5>
+            <p>San Juan Business District<br>
+            Puerto Rico 00907</p>
+            <p class="phone">Main Line: 877-824-7272</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nevada -->
+      <div class="col-md-6 col-lg-3">
+        <div class="location-card">
+          <img src="./assets/images/location/las vegas.jpg" alt="NouvaTech Nevada Office">
+          <div class="card-body">
+            <h5>Nevada</h5>
+            <p>Downtown Technology Hub<br>
+            Nevada Operations Center</p>
+            <p class="phone">Main Line: 877-824-7272</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- California -->
+      <div class="col-md-6 col-lg-3">
+        <div class="location-card">
+          <img src="./assets/images/location/california.jpg" alt="NouvaTech California Office">
+          <div class="card-body">
+            <h5>California</h5>
+            <p>Bay Area Innovation Center<br>
+            Serving Northern & Southern California</p>
+            <p class="phone">Main Line: 877-824-7272</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ================================================================ -->
+<!-- End: Our Locations Section -->
+<!-- ================================================================ -->
+
+<!-- ================================================================ -->
+<!-- Start: IT Marquee -->
+<!-- ================================================================ -->
+<div class="wc-marquee-slider-brand" style="background: linear-gradient(90deg, #cfe6ff 0%, #e4f0ff 100%);">
+  <div class="container-fluid overflow-hidden">
+    <!-- start marquee-slider -->
+    <div class="marquee-slider marquee-right-to-left marquee-slow">
+      <!-- start marquee-group -->
+      <div class="marquee-group bg-dot-style">
+        <div class="marquee-item"><span class="marquee-text">Managed IT Services</span></div>
+        <div class="marquee-item"><span class="marquee-text">Cloud Solutions</span></div>
+        <div class="marquee-item"><span class="marquee-text">Cybersecurity & Compliance</span></div>
+        <div class="marquee-item"><span class="marquee-text">Data Backup & Recovery</span></div>
+        <div class="marquee-item"><span class="marquee-text">System Integration</span></div>
+        <div class="marquee-item"><span class="marquee-text">IT Consulting</span></div>
+        <div class="marquee-item"><span class="marquee-text">Infrastructure Management</span></div>
+        <div class="marquee-item"><span class="marquee-text">Cloud Migration</span></div>
+      </div>
+
+      <!-- duplicate group for seamless loop -->
+      <div class="marquee-group bg-dot-style">
+        <div class="marquee-item"><span class="marquee-text">Managed IT Services</span></div>
+        <div class="marquee-item"><span class="marquee-text">Cloud Solutions</span></div>
+        <div class="marquee-item"><span class="marquee-text">Cybersecurity & Compliance</span></div>
+        <div class="marquee-item"><span class="marquee-text">Data Backup & Recovery</span></div>
+        <div class="marquee-item"><span class="marquee-text">System Integration</span></div>
+        <div class="marquee-item"><span class="marquee-text">IT Consulting</span></div>
+        <div class="marquee-item"><span class="marquee-text">Infrastructure Management</span></div>
+        <div class="marquee-item"><span class="marquee-text">Cloud Migration</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ================================================================ -->
+<!-- End: IT Marquee -->
+<!-- ================================================================ -->
 
 
 
@@ -1723,40 +1889,101 @@
 
 <!--! ================================================================ !-->
 
+<!-- ================================================================ -->
+<!-- Start: Contact Banner -->
+<!-- ================================================================ -->
+<section class="contact-banner-modern" style="
+  width: 100%;
+  background: linear-gradient(90deg, #e7f1ff 0%, #cde3ff 100%);
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+">
+  <style>
+    .contact-banner-modern .contact-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 35px 40px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      transition: all 0.3s ease;
+      border: 2px solid rgba(0, 115, 255, 0.1);
+    }
 
+    .contact-banner-modern .contact-inner:hover {
+      border-color: rgba(0, 115, 255, 0.25);
+      box-shadow: 0 12px 30px rgba(0,115,255,0.15);
+    }
 
-                <!-- start contact message -->
-                <div class="row mt-4 mt-md-5" data-cue="slideInUp">
-                    <div class="col-12 d-flex align-items-center">
-                        <div
-                            class="w-50px h-50px bg-body rounded-circle d-flex flex-shrink-0 align-items-center justify-content-center mr-15px">
-                            <i class="fi fi-rr-envelope"></i>
-                        </div>
-                        <div>
-                            <span class="fs-18px">Let's write something great together</span>
-                            <a href="javascript:void(0);"
-                                class="d-inline-block fw-700 text-dark link-hover-underline tx-theme-hover-primary">info@domain.com</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- end contact message -->
-            </div>
-            <!-- start shape-ellipse-01 -->
-            <figure class="position-absolute left-0px top-0px z-index-0" data-parallax='{"y": -120, "smoothness": 20}'>
-                <img src="./assets/images/shape/shape-ellipse-01.png" alt="" class="img-fluid" />
-            </figure>
-            <!-- end shape-ellipse-01 -->
-            <!-- start shape-light-bulp -->
-            <figure class="position-absolute right-15px right-md-30px right-lg-50px right-xl-80px bottom-240px"
-                data-parallax='{"y": 120, "smoothness": 20}'>
-                <img src="./assets/images/shape/shape-light-bulp.png" alt="" class="img-fluid" />
-            </figure>
-            <!-- end shape-light-bulp -->
-        </section>
-        <!--! ================================================================ !-->
-        <!--! End: Expertise Section !-->
-        <!--! ================================================================ !-->
+    .contact-banner-modern .icon {
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      background: linear-gradient(145deg, #0073ff, #005ec2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 26px;
+      flex-shrink: 0;
+      box-shadow: 0 0 15px rgba(0,115,255,0.3);
+    }
 
+    .contact-banner-modern .text {
+      text-align: left;
+    }
+
+    .contact-banner-modern .text h4 {
+      font-size: 22px;
+      font-weight: 700;
+      margin: 0;
+      color: #00274d;
+    }
+
+    .contact-banner-modern .text p {
+      margin: 5px 0 0;
+      font-size: 16px;
+      color: #444;
+    }
+
+    .contact-banner-modern .text a {
+      font-weight: 700;
+      color: #0073ff;
+      text-decoration: none;
+      margin-left: 4px;
+    }
+
+    @media (max-width: 768px) {
+      .contact-banner-modern .contact-inner {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+      }
+      .contact-banner-modern .text {
+        text-align: center;
+      }
+    }
+  </style>
+
+  <div class="contact-inner">
+    <div class="icon">
+      <i class="fi fi-rr-envelope"></i>
+    </div>
+    <div class="text">
+      <h4>Let’s collaborate and build your next IT innovation.</h4>
+      <p>Reach our solutions team at <a href="mailto:info@nouvatech.com">info@nouvatech.com</a></p>
+    </div>
+  </div>
+</section>
+<!-- ================================================================ -->
+<!-- End: Contact Banner -->
+<!-- ================================================================ -->
 
 
 
@@ -1943,197 +2170,10 @@
 <!--! End: Package Comparison Table !-->
 <!--! ================================================================ !-->
 
-<!--! ================================================================ !-->
-<!--! End: Managed Services Packages Section !-->
-<!--! ================================================================ !-->
 
 
 
 
-
-        <!--! ================================================================ !-->
-        <!--! Start: Team Style 01 Section !-->
-        <!--! ================================================================ !-->
-
-        <!--! ================================================================ !-->
-        <!--! End: Team Style 01 Section !-->
-        <!--! ================================================================ !-->
-        <!--! ================================================================ !-->
-        <!--! Start: News & Insights Section !-->
-        <!--! ================================================================ !-->
-        <!--<section class="area common-section">
-            <div class="container position-relative z-2">-->
-                <!-- start section-header -->
-                <!--<div class="section-header max-w-550px mx-auto text-center">
-                    <h6 class="section-sub-title-alt" data-cue="slideInUp">News & Insights</h6>
-                    <h2 class="section-title mb-4" data-cursor="-opaque" data-splitting>
-                        Latest <span class="text-highlight">news & insights <span class="text-highlight-bg"
-                                data-cue="slideInUp" data-duration="800" data-delay="800"></span></span>
-                    </h2>
-                    <p class="mb-0" data-cue="slideInUp">Explore expert articles, news, and insights to help your
-                        business stay competitive, informed, and future-ready in a rapidly evolving.</p>
-                </div>-->
-                <!-- end section-header -->
-                <!-- start news row -->
-                <!--<div class="row justify-content-center align-items-stretch g-3 g-sm-4">
-                    <div class="col-xl-6">
-                        <article
-                            class="card border-0 rounded-2 overflow-hidden bg-body box-shadow-modern box-shadow-hover-md transform-item-hover"
-                            data-cue="slideInUp" style="min-height: 100%">
-                            <figure class="transform-item-scale">
-                                <img src=" ./assets/images/blog/blog-01.jpg" alt=""
-                                    class="img-fluid object-fit-cover" />
-                            </figure>
-                            <div class="card-body overflow-hidden bg-body position-relative z-1">
-                                <div class="fs-12px text-uppercase mb-3">
-                                    <data value="0" class="text-secondary fw-500">30 May, 2025</data>
-                                    <span
-                                        class="d-inline-flex align-items-center justify-content-center w-5px h-5px bg-gray-500 rounded-circle mx-2"></span>
-                                    <a href="javascript:void(0);" class="text-primary fw-600">Business Solutions</a>
-                                </div>
-                                <h2 class="fs-24px mb-4 lh-base"><a href="./blogs-single-simple.html"
-                                        class="fw-700">Maximizing Business Efficiency Through Strategic Financial
-                                        Planning and Transformation.</a></h2>
-                                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipi consectetur adipi sicing
-                                    elit. Exercita tionem quae et, ut accusa ntium doloremque sequi id debitis itaque!
-                                    Sapiente aliquid at incidunt.</p>
-                                <a href="./blogs-single-simple.html" class="fs-16px tx-color-hover-primary">
-                                    <span class="me-2">Read More</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" x="0" y="0"
-                                        viewBox="0 0 24 24" style="enable-background: new 0 0 512 512"
-                                        xml:space="preserve">
-                                        <g>
-                                            <path
-                                                d="M22.354 11.646a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708l3.147-3.146H2a.5.5 0 0 1 0-1h18.793l-3.147-3.146a.5.5 0 0 1 .708-.708z"
-                                                opacity="1"></path>
-                                        </g>
-                                    </svg>
-                                </a>
-                            </div>
-                        </article>
-                    </div>-->
-                    <!--<div class="col-xl-6" data-cues="slideInUp" style="min-height: 100%">-->
-                        <!-- start article-item -->
-                       <!-- <article
-                            class="card mb-4 border-0 rounded-2 overflow-hidden bg-body box-shadow-modern box-shadow-hover-md transform-item-hover">
-                            <div class="row g-0 align-items-stretch">
-                                <div class="col-md-6">
-                                    <figure class="h-100 transform-item-scale">
-                                        <img src="./assets/images/blog/blog-02.jpg"
-                                            class="img-fluid rounded-start object-fit-cover" alt="..."
-                                            style="min-height: 100%" />
-                                    </figure>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="card-body overflow-hidden bg-body position-relative z-1">
-                                        <div class="fs-12px text-uppercase mb-3">
-                                            <data value="0" class="text-secondary fw-500">30 May, 2025</data>
-                                            <span
-                                                class="d-inline-flex align-items-center justify-content-center w-5px h-5px bg-gray-500 rounded-circle mx-2"></span>
-                                            <a href="javascript:void(0);" class="text-primary fw-600">Finance</a>
-                                        </div>
-                                        <h2 class="fs-18px mb-30px line-clamp line-clamp-2 lh-base"><a
-                                                href="./blogs-single-simple.html" class="fw-700">How Financial
-                                                Strategies Drive Business Growth</a></h2>
-                                        <a href="./blogs-single-simple.html" class="fs-16px tx-color-hover-primary">
-                                            <span class="me-2">Read More</span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" x="0"
-                                                y="0" viewBox="0 0 24 24" style="enable-background: new 0 0 512 512"
-                                                xml:space="preserve">
-                                                <g>
-                                                    <path
-                                                        d="M22.354 11.646a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708l3.147-3.146H2a.5.5 0 0 1 0-1h18.793l-3.147-3.146a.5.5 0 0 1 .708-.708z"
-                                                        opacity="1"></path>
-                                                </g>
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>-->
-                        <!-- end article-item -->
-                        <!-- start article-item -->
-                        <!--<article
-                            class="card mb-4 border-0 rounded-2 overflow-hidden bg-body box-shadow-modern box-shadow-hover-md transform-item-hover">
-                            <div class="row g-0 align-items-stretch">
-                                <div class="col-md-6">
-                                    <figure class="h-100 transform-item-scale">
-                                        <img src="./assets/images/blog/blog-03.jpg"
-                                            class="img-fluid rounded-start object-fit-cover" alt="..."
-                                            style="min-height: 100%" />
-                                    </figure>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="card-body overflow-hidden bg-body position-relative z-1">
-                                        <div class="fs-12px text-uppercase mb-3">
-                                            <data value="0" class="text-secondary fw-500">25 May, 2025</data>
-                                            <span
-                                                class="d-inline-flex align-items-center justify-content-center w-5px h-5px bg-gray-500 rounded-circle mx-2"></span>
-                                            <a href="javascript:void(0);" class="text-primary fw-600">Investment</a>
-                                        </div>
-                                        <h2 class="fs-18px mb-30px line-clamp line-clamp-2 lh-base"><a
-                                                href="./blogs-single-simple.html" class="fw-700">Top 5 Financial
-                                                Investment Trends to Watch in 2025</a></h2>
-                                        <a href="./blogs-single-simple.html" class="fs-16px tx-color-hover-primary">
-                                            <span class="me-2">Read More</span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" x="0"
-                                                y="0" viewBox="0 0 24 24" style="enable-background: new 0 0 512 512"
-                                                xml:space="preserve">
-                                                <g>
-                                                    <path
-                                                        d="M22.354 11.646a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708l3.147-3.146H2a.5.5 0 0 1 0-1h18.793l-3.147-3.146a.5.5 0 0 1 .708-.708z"
-                                                        opacity="1"></path>
-                                                </g>
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>-->
-                        <!-- end article-item -->
-                        <!-- start article-item -->
-                        <!--<article
-                            class="card mb-0 border-0 rounded-2 overflow-hidden bg-body box-shadow-modern box-shadow-hover-md transform-item-hover">
-                            <div class="row g-0 align-items-stretch">
-                                <div class="col-md-6">
-                                    <figure class="h-100 transform-item-scale">
-                                        <img src="./assets/images/blog/blog-04.jpg"
-                                            class="img-fluid rounded-start object-fit-cover" alt="..."
-                                            style="min-height: 100%" />
-                                    </figure>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="card-body overflow-hidden bg-body position-relative z-1">
-                                        <div class="fs-12px text-uppercase mb-3">
-                                            <data value="0" class="text-secondary fw-500">20 May, 2025</data>
-                                            <span
-                                                class="d-inline-flex align-items-center justify-content-center w-5px h-5px bg-gray-500 rounded-circle mx-2"></span>
-                                            <a href="javascript:void(0);" class="text-primary fw-600">Budgeting</a>
-                                        </div>
-                                        <h2 class="fs-18px mb-30px line-clamp line-clamp-2 lh-base"><a
-                                                href="./blogs-single-simple.html" class="fw-700">Building Resilience:
-                                                Smart Budgeting Tactics</a></h2>
-                                        <a href="./blogs-single-simple.html" class="fs-16px tx-color-hover-primary">
-                                            <span class="me-2">Read More</span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" x="0"
-                                                y="0" viewBox="0 0 24 24" style="enable-background: new 0 0 512 512"
-                                                xml:space="preserve">
-                                                <g>
-                                                    <path
-                                                        d="M22.354 11.646a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708l3.147-3.146H2a.5.5 0 0 1 0-1h18.793l-3.147-3.146a.5.5 0 0 1 .708-.708z"
-                                                        opacity="1"></path>
-                                                </g>
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>-->
-                        <!-- end article-item -->
                     </div>
                 </div>
                 <!-- end news row -->
@@ -2161,11 +2201,13 @@
                             <div class="card-body p-sm-5" data-cues="slideInUp">
                                 <div class="mb-3 pb-3 border-bottom" style="border-bottom-style: dashed !important">
                                     <span class="mb-2 d-inline-block fs-13px text-uppercase">Call Now</span>
-                                    <h6><a href="tel:+8801765952765">+1.630-292-3780</a></h6>
+                                    <h6><a href="tel:+8801765952765">877-824-7272</a></h6>
                                 </div>
                                 <div class="mb-3 pb-3 border-bottom" style="border-bottom-style: dashed !important">
                                     <span class="mb-2 d-inline-block fs-13px text-uppercase">Office Address</span>
-                                    <h6><a target="_blank" href=""> Humacao, PR 00791 US</a></h6>
+                                    <h6><a target="_blank" href=""> 6801 Jefferson St. NE Ste 150 PMB 3134
+Albuquerque, NM 87109
+United States</a></h6>
                                 </div>
                                 <div class="mb-3 pb-3 border-bottom" style="border-bottom-style: dashed !important">
                                     <span class="mb-2 d-inline-block fs-13px text-uppercase">Quick Email</span>
@@ -2330,301 +2372,227 @@
     <!--! ================================================================ !-->
     <!--! End: Main Area !-->
     <!--! ================================================================ !-->
-    <!--! ================================================================ !-->
-    <!--! Start: Footer Area !-->
-    <!--! ================================================================ !-->
-    <footer class="wc-footer-area">
-
-
-
-       <!-- start wc-footer-top -->
-<
-<!-- end wc-footer-top -->
 
 
 
 
 
-        <!-- start wc-footer-main -->
-        <div class="wc-footer-main">
-            <div class="container position-relative z-3">
-                <!-- start row -->
-                <div class="row g-3 g-sm-4 g-xl-5" data-cues="slideInUp">
-                    <!-- start col -->
-                    <div class="col-xl-3 mb-xl-40px mb-0">
-                        <div class="mb-30px">
-                            <img src="./assets/images/logo/nouva-logo.png" alt="NouvaTech">
-                        </div>
-                        <p class="mb-40px">TECHNOLOGY SOLUTIONS
 
-                            .</p>
-                        <div class="d-flex align-items-center gap-2 mb-4">
-                            <a href="javascript:void(0);" class="wc-footer-solial-link"> <i
-                                    class="fa-brands fa-facebook"></i></a>
-                            <a href="javascript:void(0);" class="wc-footer-solial-link"> <i
-                                    class="fa-brands fa-x-twitter"></i></a>
-                            <a href="javascript:void(0);" class="wc-footer-solial-link"> <i
-                                    class="fa-brands fa-linkedin"></i></a>
-                            <a href="javascript:void(0);" class="wc-footer-solial-link"> <i
-                                    class="fa-brands fa-instagram"></i></a>
-                            <a href="javascript:void(0);" class="wc-footer-solial-link d-xl-none d-xxl-flex"> <i
-                                    class="fa-brands fa-windows"></i></a>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <!-- start col -->
-                    <!--<div class="col-6 col-lg-3 col-xl-2">
-                        <h6 class="wc-footer-title">Services</h6>
-                        <ul class="list-unstyled mb-0">
-                            <li><a href="javascript:void(0);">Planning</a></li>
-                            <li><a href="javascript:void(0);">Research</a></li>
-                            <li><a href="javascript:void(0);">Consulting</a></li>
-                            <li><a href="javascript:void(0);">Leadership</a></li>
-                            <li><a href="javascript:void(0);">Marketing</a></li>
-                            <li><a href="javascript:void(0);">Research</a></li>
-                        </ul>
-                    </div>-->
-                    <!-- end col -->
-                    <!-- start col -->
-                    <!--<div class="col-6 col-lg-3 col-xl-2">
-                        <h6 class="wc-footer-title">Customer</h6>
-                        <ul class="list-unstyled mb-0">
-                            <li><a href="javascript:void(0);">Help Center</a></li>
-                            <li><a href="javascript:void(0);">System Status</a></li>
-                            <li><a href="javascript:void(0);">Feedbacks</a></li>
-                            <li><a href="javascript:void(0);">Legal Notice</a></li>
-                            <li><a href="javascript:void(0);">Client Support</a></li>
-                            <li><a href="javascript:void(0);">Leadership</a></li>
-                        </ul>
-                    </div>-->
-                    <!-- end col -->
-                    <!-- start col -->
-                    <!--<div class="col-6 col-lg-3 col-xl-2">
-                        <h6 class="wc-footer-title">Company</h6>
-                        <ul class="list-unstyled mb-0">
-                            <li><a href="javascript:void(0);">About Us</a></li>
-                            <li><a href="javascript:void(0);">Contact Us</a></li>
-                            <li><a href="javascript:void(0);">Legal Notices</a></li>
-                            <li><a href="javascript:void(0);">Our Services</a></li>
-                            <li><a href="javascript:void(0);">System Status</a></li>
-                            <li><a href="javascript:void(0);">Client Support</a></li>
-                        </ul>
-                    </div>-->
-                    <!-- end col -->
-                    <!-- start col -->
-                    <!--<div class="col-6 d-sm-none">
-                        <h6 class="wc-footer-title">Resourses</h6>
-                        <ul class="list-unstyled mb-0">
-                            <li><a href="javascript:void(0);">Planning</a></li>
-                            <li><a href="javascript:void(0);">Research</a></li>
-                            <li><a href="javascript:void(0);">Consulting</a></li>
-                            <li><a href="javascript:void(0);">Leadership</a></li>
-                            <li><a href="javascript:void(0);">Marketing</a></li>
-                            <li><a href="javascript:void(0);">Research</a></li>
-                        </ul>
-                    </div>-->
-                    <!-- end col -->
-
-
-
-                    <!-- start col -->
-                    <div class="col-sm-6 col-lg-3 col-xl-3">
-                        <h6 class="wc-footer-title">Get in touch</h6>
-                        <address class="mb-4">
-                             Humacao <br>
-                            PR 00791 US
-                        </address>
-                        <div class="mb-3">
-                            <a href="tel:+123456789" class="fs-16px d-flex align-items-center gap-3">
-                                <i class="fi fi-rr-phone-call"></i>
-                                <span class="link-hover-underline">+1.630-292-3780</span>
-                            </a>
-                        </div>
-                        <div class="mb-0">
-                            <a href="mailto:info@domain.com" class="fs-16px d-inline-flex align-items-center gap-3">
-                                <i class="fi fi-rr-envelope"></i>
-                                <span class="link-hover-underline">info@nouvatech.com</span>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                </div>
-                <!-- end row -->
-            </div>
+<!-- ================================================================ -->
+<!-- Start: Footer Area -->
+<!-- ================================================================ -->
+<footer class="footer-area pt-80px pb-40px">
+  <div class="container">
+    <div class="row gy-5">
+      
+      <!-- Logo & About -->
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-logo mb-4">
+          <img src="./assets/images/logo/nouva-logo.png" alt="NouvaTech" class="img-fluid" style="max-width:180px;">
         </div>
-        <!-- end wc-footer-main -->
-        <!-- start wc-footer-bottom -->
-        <div class="wc-footer-bottom">
-            <div class="container d-flex align-items-center justify-content-between">
-                <!-- start copyright -->
-                <div>
-                    <span>Copyright &copy;</span>
-                    <script>
-                        document.write(new Date().getFullYear());
-                    </script>
-                    <span class="mx-1 d-none d-lg-inline-block">|</span>
-                    <span class="d-none d-lg-inline-block"> All rights reserved by <a href="javascript:void(0);"
-                            class="fw-700">NouvaTech</a></span>
-                </div>
-                <!-- end copyright -->
-                <!-- start footer-bottom-links -->
-                <div class="d-none d-md-flex align-items-center">
-                    <a href="javascript:void(0);">Term of Services</a>
-                    <span class="mx-3">/</span>
-                    <a href="javascript:void(0);">Privacy policy</a>
-                    <span class="mx-3">/</span>
-                    <a href="javascript:void(0);">Copyright</a>
-                </div>
-                <!-- end footer-bottom-links -->
-            </div>
-        </div>
-        <!-- end wc-footer-bottom -->
-        <!-- start bg-blur-shape-01 -->
-        <div class="bg-blur-shape-01"></div>
-        <!-- start bg-blur-shape-01 -->
-        <!-- start bg-blur-shape-02 -->
-        <div class="bg-blur-shape-02"></div>
-        <!-- start bg-blur-shape-02 -->
-    </footer>
+        <p class="text-secondary mb-0">
+          Delivering reliable, scalable, and secure IT solutions that empower organizations to grow with confidence.
+        </p>
+      </div>
 
-    <!--! ================================================================ !-->
-    <!--! End: Footer Area !-->
-    <!--! ================================================================ !-->
+      <!-- Services -->
+      <div class="col-lg-2 col-md-6">
+        <h6 class="fw-700 mb-3 text-dark">Services</h6>
+        <ul class="list-unstyled">
+          <li><a href="#">IT Consulting</a></li>
+          <li><a href="#">Cloud Solutions</a></li>
+          <li><a href="#">Cybersecurity</a></li>
+          <li><a href="#">Automation</a></li>
+        </ul>
+      </div>
 
-    
-    <!--! ================================================================ !-->
-    <!--! Start: Search Offanvas !-->
-    <!--! ================================================================ !-->
-    <div class="wc-search-canvas offcanvas offcanvas-top border-0" id="searchCanvas" tabindex="-1"
-        style="height: min-content">
-        <button type="button" class="btn-close m-25px position-absolute end-0 top-0 z-3"
-            data-bs-dismiss="offcanvas"></button>
-        <div class="wc-help-search-area common-section">
-            <div class="container position-relative z-2">
-                <!-- start section-header -->
-                <div class="section-header mb-0 max-w-800px mx-auto text-center">
-                    <h2 class="section-title mb-4 mb-xl-5 fs-28px fs-sm-36px fs-md-50px fs-lg-60px"
-                        data-cursor="-opaque" data-splitting>
-                        Hi, how we <span class="text-highlight">help<span class="text-highlight-bg" data-cue="slideInUp"
-                                data-duration="800" data-delay="800"></span></span> you today?
-                    </h2>
-                    <form action="javascript:void(0);" class="position-relative">
-                        <input type="text" class="p-25px form-control" placeholder="Search here...." required="">
-                        <span class="fs-16px form-text mt-3 d-inline-block">We are committed to protecting your <a
-                                href="javascript:void(0);"
-                                class="text-decoration-underline text-dark link-offset-3 tx-theme-hover-primary">privacy
-                                policy</a></span>
-                        <button type="submit"
-                            class="wc-btn wc-btn-primary position-absolute top-0 end-0 z-3 px-30px px-md-50px rounded"
-                            style="margin: 8px 8px">
-                            <span class="wc-btn-text">Search</span>
-                        </button>
-                    </form>
-                </div>
-                <!-- end section-header -->
-            </div>
-            <!-- start shape-grid-primary -->
-            <figure class="position-absolute top-0px left-0px z-index-0">
-                <img src="./assets/images/shape/shape-grid-xs.png" alt="" class="img-fluid">
-            </figure>
-            <!-- end shape-grid-primary -->
-            <!-- start shape-search-icon -->
-            <figure class="position-absolute d-none d-xl-block bottom-25px bottom-xl-50px right-50px right-xxl-80px">
-                <img src="./assets/images/shape/shape-search-icon.png" alt="" class="img-fluid">
-            </figure>
-            <!-- end shape-search-icon -->
+      <!-- Company -->
+      <div class="col-lg-2 col-md-6">
+        <h6 class="fw-700 mb-3 text-dark">Company</h6>
+        <ul class="list-unstyled">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Legal Notices</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-lg-4 col-md-6">
+        <h6 class="fw-700 mb-3 text-dark">Get in Touch</h6>
+        <address class="text-secondary mb-3">
+          6801 Jefferson St. NE Ste 150 PMB 3134<br>
+          Albuquerque, NM 87109<br>
+          United States
+        </address>
+        <div class="mb-2">
+          <i class="fi fi-rr-phone-call me-2 text-primary"></i>
+          <a href="tel:+18778247272" class="text-dark text-decoration-none">Main Line: 877-824-7272</a>
         </div>
+        <div>
+          <i class="fi fi-rr-envelope me-2 text-primary"></i>
+          <a href="mailto:info@nouvatech.com" class="text-dark text-decoration-none">info@nouvatech.com</a>
+        </div>
+      </div>
     </div>
 
-    <!--! ================================================================ !-->
-    <!--! End: Search Offanvas !-->
-    <!--! ================================================================ !-->
-    <!--! ================================================================ !-->
-    <!--! Start: Quick Info Offanvas !-->
-    <!--! ================================================================ !-->
-    <div class="offcanvas offcanvas-end border-0 max-w-360px max-w-md-400px" id="InfoCanvas" tabindex="-1">
-        <div class="offcanvas-header border-bottom">
-            <a href="./index.html">
-                <img src="./assets/images/logo/output-onlinepngtools.png" alt="logo" />
-            </a>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    <hr class="my-4">
+
+    <!-- Certifications Row -->
+    <div class="footer-certifications text-center mb-4">
+      <h6 class="fw-700 text-dark mb-4">Proudly Certified & Partnered</h6>
+      <div class="d-flex flex-wrap justify-content-center align-items-center cert-row">
+        <div class="cert-item">
+          <img src="./assets/images/footer/eeo-removebg-preview.png" alt="EEO Employer" class="cert-logo">
         </div>
-        <div class="offcanvas-body">
-            <!-- start wc-theme-info -->
-            <div class="wc-theme-info">
-                <p class="fs-16px text-muted mb-3">NouvaTech .</p>
-                <a href="" target="_blank" class="fs-13px fw-700 tx-theme-primary link-hover-underline">
-                    <span class="me-2 text-uppercase">Explore More</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
-                        width="25" height="25" x="0" y="0" viewBox="0 0 24 24"
-                        style="enable-background: new 0 0 512 512" xml:space="preserve">
-                        <g>
-                            <path
-                                d="M22.354 11.646a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708l3.147-3.146H2a.5.5 0 0 1 0-1h18.793l-3.147-3.146a.5.5 0 0 1 .708-.708z"
-                                fill="#015941" opacity="1" data-original="#000000"></path>
-                        </g>
-                    </svg>
-                </a>
-            </div>
-            <!-- end wc-theme-info -->
-            <hr class="my-40px" style="border-top-style: dashed" />
-            <!-- start wc-contact-info -->
-            <div class="wc-contact-info">
-                <a href="tel:+1(375)-9850-6987" class="d-block mb-4">
-                    <div class="d-flex align-items-center gap-4">
-                        <div
-                            class="w-60px h-60px bg-theme-light rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
-                            <i class="fi fi-rr-phone-call text-primary fs-20px"></i>
-                        </div>
-                        <div class="flex-grow-1 lh-lg">
-                            <span class="d-block fs-12px fw-600 text-uppercase text-muted lt-spacing-sm">For
-                                Consultation</span>
-                            <span class="d-block fs-16px fw-600">+1.630-292-3780</span>
-                        </div>
-                    </div>
-                </a>
-                <a href="mailto:wrapcoders@gmail.com" class="d-block mb-4">
-                    <div class="d-flex align-items-center gap-4">
-                        <div
-                            class="w-60px h-60px bg-theme-light rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
-                            <i class="fi fi-rr-envelope text-primary fs-20px"></i>
-                        </div>
-                        <div class="flex-grow-1 lh-lg">
-                            <span class="d-block fs-12px fw-600 text-uppercase text-muted lt-spacing-sm">Email Us</span>
-                            <span class="d-block fs-16px fw-600">info@nouvatech.com</span>
-                        </div>
-                    </div>
-                </a>
-                <a href="javascript:void(0);" class="d-block mb-4">
-                    <div class="d-flex align-items-center gap-4">
-                        <div
-                            class="w-60px h-60px bg-theme-light rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
-                            <i class="fi fi-rr-clock text-primary fs-20px"></i>
-                        </div>
-                        <div class="flex-grow-1 lh-lg">
-                            <span class="d-block fs-12px fw-600 text-uppercase text-muted lt-spacing-sm">Working
-                                Hours</span>
-                            <span class="d-block fs-16px fw-600">Mon - Frd : 8:00 - 12:00</span>
-                        </div>
-                    </div>
-                </a>
-                <a href="javascript:void(0);" class="d-block mb-0">
-                    <div class="d-flex align-items-center gap-4">
-                        <div
-                            class="w-60px h-60px bg-theme-light rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
-                            <i class="fi fi-rr-marker text-primary fs-20px"></i>
-                        </div>
-                        <div class="flex-grow-1 lh-lg">
-                            <span class="d-block fs-12px fw-600 text-uppercase text-muted lt-spacing-sm">Office
-                                Location</span>
-                            <address class="fs-16px fw-700 mb-0 lh-base line-clamp line-clamp-2">
-                                 Humacao <br />
-                                PR 00791 US 
-                            </address>
-                        </div>
-                    </div>
-                </a>
-            </div>
+        <div class="cert-divider"></div>
+        <div class="cert-item">
+          <img src="./assets/images/footer/minority-removebg-preview.png" alt="Minority Owned Business" class="cert-logo">
+        </div>
+        <div class="cert-divider"></div>
+        <div class="cert-item">
+          <img src="./assets/images/footer/women-removebg-preview.png" alt="Women Owned Business" class="cert-logo">
+        </div>
+        <div class="cert-divider"></div>
+        <div class="cert-item">
+          <img src="./assets/images/footer/veteran-removebg-preview.png" alt="US Veteran Owned Business" class="cert-logo">
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Footer -->
+    <div class="d-flex flex-column flex-md-row align-items-center justify-content-between text-center text-md-start">
+      <p class="mb-0 text-secondary small">
+        © <script>document.write(new Date().getFullYear())</script> NouvaTech. All rights reserved.
+      </p>
+      <div class="footer-links mt-3 mt-md-0">
+        <a href="#">Terms of Service</a>
+        <span class="mx-2">|</span>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer-area {
+    width: 100%;
+    background: #ffffff;
+    color: #444;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    margin-bottom: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  /* Light top edge for separation */
+  .footer-area::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, rgba(0, 115, 255, 0.15), rgba(0, 115, 255, 0.05));
+  }
+
+  .footer-area a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer-area a:hover {
+    color: #0073ff;
+  }
+
+  .footer-links a {
+    font-size: 14px;
+  }
+
+  .footer-area ul li {
+    margin-bottom: 8px;
+  }
+
+  .footer-area ul li a {
+    font-size: 15px;
+  }
+
+  /* Certifications Row */
+  .footer-certifications {
+    margin-top: 40px;
+  }
+
+  .cert-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+  }
+
+  .cert-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cert-logo {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(0.4);
+    transition: all 0.3s ease;
+  }
+
+  .cert-logo:hover {
+    filter: grayscale(0) brightness(1.1);
+    transform: scale(1.05);
+  }
+
+  .cert-divider {
+    width: 1px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.08);
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .footer-area {
+      text-align: center;
+      padding-top: 40px;
+      padding-bottom: 20px;
+    }
+
+    .cert-divider {
+      display: none;
+    }
+
+    .cert-logo {
+      height: 50px;
+    }
+  }
+</style>
+
+
+
+
+<!-- ================================================================ -->
+<!-- End: Footer Area -->
+<!-- ================================================================ -->
+
+<!-- ================================================================ -->
+<!-- End: Footer Area -->
+<!-- ================================================================ -->
+
+<!-- ================================================================ -->
+<!-- End: Footer Area -->
+<!-- ================================================================ -->
+
+<!-- ================================================================ -->
+<!-- End: Footer Area -->
+<!-- ================================================================ -->
+
             <!-- end wc-contact-info -->
             <!--<hr class="my-40px" style="border-top-style: dashed" />
             <div class="wc-instagram-feed row row-cols-2 g-2">
@@ -2666,7 +2634,7 @@
                     </figure>
                 </a>
             </div>-->
-            <hr class="my-40px" style="border-top-style: dashed" />
+   
             <!-- start wc-social-links -->
             <!--<div class="wc-social-links">
                 <h6 class="fs-13px fw-700 text-uppercase mb-4">Follow Us:</h6>
@@ -2727,5 +2695,4 @@
 </body>
 
 </html>
-
 
