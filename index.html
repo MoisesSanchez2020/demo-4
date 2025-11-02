@@ -91,29 +91,7 @@
                         <option value="">Arabic</option>
                         <option value="">Spanish</option>-->
                     </select>
-                   <!---<span class="vr"></span>
-                    <a href="javascript:void(0);" class="">
-                        <i class="fa-brands fa-facebook"></i>
-                    </a>
-                    <span class="vr"></span>
-                    <a href="javascript:void(0);" class="">
-                        <i class="fa-brands fa-x-twitter"></i>
-                    </a>
-                    <span class="vr"></span>
-                    <a href="javascript:void(0);" class="">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                    <span class="vr"></span>
-                    <a href="javascript:void(0);" class="">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <span class="vr"></span>
-                    <a href="javascript:void(0);" class="d-none d-sm-flex">
-                        <i class="fa-brands fa-youtube"></i>
-                    </a>
-                    <span class="vr d-none d-sm-flex"></span>
-                </div>-->
-                <!-- end header-topbar-right -->
+                  
             </div>
         </div>
         <!-- end header-topbar -->
@@ -606,18 +584,20 @@
   line-height: 1.55;
   margin: 0;
 }
-
-/* ✅ Force larger icon size and override Bootstrap/image-fluid rules */
+/* ✅ Smaller, balanced icons for cleaner layout */
 .key-feature-icon img {
-  width: 80px !important;      /* make icon noticeably larger */
-  height: 80px !important;
-  max-width: none !important;  /* ignore .img-fluid limit */
-  max-height: none !important;
+  width: 140px !important;
+  height: 140px !important;
   object-fit: contain !important;
   opacity: 1;
-  filter: brightness(0) saturate(100%) invert(30%) sepia(88%) saturate(1668%) hue-rotate(189deg) brightness(97%) contrast(96%);
-  /* The above filter tints icons with NouvaTech blue — remove this line if icons are already colored */
+  filter: brightness(0) saturate(100%) !important; /* keep them black */
+  transition: transform 0.3s ease;
 }
+
+.key-feature-item:hover .key-feature-icon img {
+  transform: scale(1.05);
+}
+
 /* Make icons pure black (keep current size) */
 .key-feature-icon img {
   filter: brightness(0) saturate(100%) !important; /* turns blue icons black */
@@ -660,6 +640,56 @@
     align-items: flex-start;
   }
 }
+
+/* ✅ Consistent small icon size across all devices and centered alignment */
+.key-feature-content {
+  display: flex;
+  align-items: center; /* centra verticalmente ícono y texto */
+  gap: 15px;
+}
+
+.key-feature-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tamaño universal de íconos */
+.key-feature-icon img {
+  width: 58px !important;
+  height: 58px !important;
+  object-fit: contain !important;
+  opacity: 1;
+  filter: brightness(0) saturate(100%) !important; /* mantiene color negro */
+  transition: transform 0.3s ease;
+}
+
+/* Hover sutil */
+.key-feature-item:hover .key-feature-icon img {
+  transform: scale(1.08);
+}
+
+/* Ajustes responsive */
+@media (max-width: 992px) {
+  .key-feature-icon img {
+    width: 46px !important;
+    height: 46px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .key-feature-content {
+    flex-direction: row; /* mantiene el ícono al lado del texto */
+    align-items: flex-start;
+  }
+
+  .key-feature-icon img {
+    width: 44px !important;
+    height: 44px !important;
+  }
+}
+
 </style>
 
 

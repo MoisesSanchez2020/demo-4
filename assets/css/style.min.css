@@ -1198,3 +1198,12 @@ body .loader-wrapper .loader{ height: 5px;width: 200px;border-radius: 5px;--c: n
   color: var(--wc-brand) !important; /* optional: keep the arrow blue, or change to black */
   border: none !important;
 }
+
+/* === Remove blue arrow boxes from hero slider === */
+.wc-slick-arrow,
+.slick-prev,
+.slick-next {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
