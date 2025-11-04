@@ -130,18 +130,76 @@
           <!-- end wc-mobile-logo-->
         </div>
         <!-- end wc-mobile-menu-header -->
+<!-- ================================================================ -->
+<!-- Start: Main Navigation Menu -->
+<!-- ================================================================ -->
+<ul class="wc-main-menu">
+  <li><a href="#home">Home</a></li>              <!-- Hero Header -->
+  
+  <li><a href="#services">IT Services</a></li>      <!-- Services Overview -->
+  <li><a href="#process">Process</a></li>        <!-- Our Work Process -->
+    <!-- Industries We Serve -->
+  <li><a href="#pricing">Packages</a></li>       <!-- Managed IT Packages -->
+  <li><a href="#about">About</a></li>            <!-- About + Company History -->
+  <li><a href="#faq">FAQ</a></li>                <!-- Frequently Asked Questions -->
+ <li><a href="contact.html" class="active">Contact</a></li>
+       <!-- Footer or Contact Banner -->
+</ul>
+<!-- ================================================================ -->
+<!-- End: Main Navigation Menu -->
+<!-- ================================================================ -->
 
-        <!-- start wc-main-menu -->
-        <ul class="wc-main-menu">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <!--<li><a href="#expertise">Expertise</a></li>-->
-          <!--<li><a href="#process">Process</a></li>-->
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <!-- end wc-main-menu -->
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .wc-main-menu a.active {
+    color: var(--wc-theme-primary, #0073ff);
+    font-weight: 700;
+    position: relative;
+  }
+
+  .wc-main-menu a.active::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--wc-theme-primary, #0073ff);
+    border-radius: 2px;
+  }
+</style>
+
+<script>
+  // Smooth scroll with offset for fixed header
+  document.querySelectorAll('.wc-main-menu a').forEach(link => {
+    link.addEventListener('click', function (e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        const yOffset = -90; // offset for sticky header
+        const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Active link highlight on scroll
+  window.addEventListener('scroll', () => {
+    const scrollPos = window.scrollY + 120;
+    document.querySelectorAll('.wc-main-menu a').forEach(link => {
+      const section = document.querySelector(link.getAttribute('href'));
+      if (section && section.offsetTop <= scrollPos && section.offsetTop + section.offsetHeight > scrollPos) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  });
+</script>
+
 
         <!-- start wc-mobile-menu-footer -->
         <div class="wc-mobile-menu-footer d-lg-none d-xl-none">
@@ -177,9 +235,10 @@
 
     <!-- Get a Tech Evaluation Button -->
     <div class="d-none d-xl-flex align-items-center ms-2">
-      <a href="#contact" class="get-eval-btn">
-        <i class="fi fi-rr-laptop me-2"></i> Get a Tech Evaluation
-      </a>
+      <a href="contact.html" class="get-eval-btn">
+  <i class="fi fi-rr-laptop me-2"></i> Get a Tech Evaluation
+</a>
+
     </div>
 
     <!-- Mobile Menu Icon -->
@@ -304,10 +363,11 @@
                             Seamless managed services, cybersecurity, cloud, and support — so your team stays focused on what matters!
                         </p>
                         <div class="mt-60px d-flex gap-3">
-                            <a href="./page-request-quote.html" class="wc-slider-btn wc-btn wc-btn-brand">
-                                <span class="wc-btn-text">Get a Free IT Assessment</span>
-                                <span class="wc-btn-icon"><i class="fi fi-rr-arrow-up-right"></i></span>
-                            </a>
+                            <a href="./contact.html" class="wc-slider-btn wc-btn wc-btn-brand">
+  <span class="wc-btn-text">Get a Free IT Assessment</span>
+  <span class="wc-btn-icon"><i class="fi fi-rr-arrow-up-right"></i></span>
+</a>
+
                             <div class="wc-slider-btn d-none d-sm-flex">
                                 <a href="tel:+1(375)-9874-6325" class="wc-btn wc-btn-icon wc-btn-light pulse-effect"
                                    data-bs-toggle="tooltip" data-bs-placement="top" aria-label="+1(375)-9874-6325"
@@ -339,10 +399,11 @@
                             and secure technology that fuels your growth.
                         </p>
                         <div class="mt-60px d-flex gap-3">
-                            <a href="./page-request-quote.html" class="wc-slider-btn wc-btn wc-btn-brand">
-                                <span class="wc-btn-text">Get a Free IT Assessment</span>
-                                <span class="wc-btn-icon"><i class="fi fi-rr-arrow-up-right"></i></span>
-                            </a>
+                           <a href="./contact.html" class="wc-slider-btn wc-btn wc-btn-brand">
+  <span class="wc-btn-text">Get a Free IT Assessment</span>
+  <span class="wc-btn-icon"><i class="fi fi-rr-arrow-up-right"></i></span>
+</a>
+
                             <div class="wc-slider-btn d-none d-sm-flex">
                                 <a href="tel:+1(375)-9874-6325" class="wc-btn wc-btn-icon wc-btn-light pulse-effect"
                                    data-bs-toggle="tooltip" data-bs-placement="top" aria-label="+1(375)-9874-6325"
@@ -374,10 +435,11 @@
                             data, and simplify your IT. Let’s talk about what’s next for your business.
                         </p>
                         <div class="mt-60px d-flex gap-3">
-                            <a href="./page-request-quote.html" class="wc-slider-btn wc-btn wc-btn-brand">
-                                <span class="wc-btn-text">Get a Free IT Assessment</span>
-                                <span class="wc-btn-icon"><i class="fi fi-rr-arrow-up-right"></i></span>
-                            </a>
+                           <a href="./contact.html" class="wc-slider-btn wc-btn wc-btn-brand">
+  <span class="wc-btn-text">Get a Free IT Assessment</span>
+  <span class="wc-btn-icon"><i class="fi fi-rr-arrow-up-right"></i></span>
+</a>
+
                             <div class="wc-slider-btn d-none d-sm-flex">
                                 <a href="tel:+1(375)-9874-6325" class="wc-btn wc-btn-icon wc-btn-light pulse-effect"
                                    data-bs-toggle="tooltip" data-bs-placement="top" aria-label="+1(375)-9874-6325"
@@ -644,253 +706,6 @@
 </style>
 
 
-
-
-
-
-
-
-
-
-
-<!--! ================================================================ !-->
-<!--! Start: About Section !-->
-<!--! ================================================================ !-->
-<section class="wc-about-area common-section" style="background: linear-gradient(to bottom, #d4d0d0, #ffffff);">
-  <style>
-  /* Force dark text inside this section only */
-  .wc-about-area a,
-  .wc-about-area h1,
-  .wc-about-area h2,
-  .wc-about-area h3,
-  .wc-about-area h4,
-  .wc-about-area h5,
-  .wc-about-area h6,
-  .wc-about-area p,
-  .wc-about-area span {
-    color: #000 !important;
-  }
-
-  /* Add comfortable top/bottom padding for the section */
-  .wc-about-area {
-    padding-top: 100px !important;
-    padding-bottom: 100px !important;
-    background: linear-gradient(to bottom, #f9fafc, #ffffff);
-  }
-
-  /* Grid alignment and spacing between columns */
-  .wc-about-area .row {
-    align-items: center;
-    gap: 60px 0 !important;
-  }
-
-  /* Equal column widths */
-  .wc-about-area .col-media,
-  .wc-about-area .col-copy {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-
-  /* Add horizontal space between image and text */
-  .wc-about-area .col-media {
-    padding-right: 30px !important;
-  }
-
-  .wc-about-area .col-copy {
-    padding-left: 30px !important;
-  }
-
-  /* Image wrapper for badge positioning */
-  .about-figure {
-    position: relative;
-    display: block;
-  }
-
-  .about-figure img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 12px;
-  }
-
-  /* 15+ badge styling */
-  .about-badge {
-    position: absolute;
-    right: -18px;
-    bottom: -18px;
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    text-align: center;
-    background: radial-gradient(closest-side, #e1dede 58%, rgba(255,255,255,0) 59%),
-                linear-gradient(180deg, #eef4fb 0%, #e6edf7 100%);
-    box-shadow: 0 10px 24px rgba(0,0,0,0.08);
-    z-index: 1;
-    padding: 14px;
-    pointer-events: none;
-  }
-
-  .about-badge .num {
-    font-family: var(--wc-ff-number, ui-sans-serif, system-ui);
-    font-weight: 800;
-    line-height: 1;
-    font-size: clamp(36px, 6vw, 60px);
-    color: var(--wc-theme-primary, #0b6efd);
-    display: block;
-  }
-
-  .about-badge .txt {
-    margin-top: 6px;
-    font-size: 15px;
-    line-height: 1.25;
-    color: #111;
-  }
-
-  /* List icons */
-  .wc-about-list-icon {
-    width: 70px;
-    height: 70px;
-    border-radius: 10px;
-  }
-
-  .wc-about-list-icon img {
-    width: 36px;
-    height: 36px;
-    object-fit: contain;
-    filter: brightness(0) saturate(100%) !important;
-  }
-
-  /* Responsive spacing and layout */
-  @media (max-width: 992px) {
-    .wc-about-area {
-      padding-top: 70px !important;
-      padding-bottom: 70px !important;
-    }
-
-    .wc-about-area .col-media,
-    .wc-about-area .col-copy {
-      flex: 0 0 100%;
-      max-width: 100%;
-    }
-
-    /* Center badge below image */
-    .about-badge {
-      position: static;
-      margin: 30px auto 0;
-      width: 200px;
-      height: 200px;
-    }
-
-    /* Reduce gap between sections on mobile */
-    .wc-about-area .row {
-      gap: 40px 0 !important;
-    }
-  }
-
-  @media (max-width: 576px) {
-    .wc-about-area {
-      padding-top: 50px !important;
-      padding-bottom: 50px !important;
-    }
-
-    .wc-about-list-icon {
-      width: 60px;
-      height: 60px;
-    }
-
-    .wc-about-list-icon img {
-      width: 30px;
-      height: 30px;
-    }
-  }
-</style>
-
-
-  <div class="container position-relative z-2">
-    <div class="row g-0">
-      <!-- Left: Image -->
-      <div class="col-media col-lg-6 mb-5 mb-lg-0">
-        <figure class="about-figure">
-          <img src="./assets/images/general/img-meeting.jpg" alt="NouvaTech team meeting">
-          <div class="about-badge">
-            <span class="num">15+</span>
-            <div class="txt">Years working<br>experiences.</div>
-          </div>
-        </figure>
-      </div>
-
-      <!-- Right: Copy -->
-      <div class="col-copy col-lg-6 ps-0 ps-lg-5">
-        <h6 class="section-sub-title" data-cue="slideInUp">About Our Company</h6>
-        <h2 class="section-title mb-4" data-cursor="-opaque" data-splitting>
-          Smart, Secure, and <span class="text-highlight">Scalable
-          <span class="text-highlight-bg" data-cue="slideInUp" data-duration="800" data-delay="800"></span></span> IT solutions.
-        </h2>
-
-        <p class="mb-4" data-cue="slideInUp">
-          At <strong>NouvaTech</strong>, we’re redefining managed IT by combining innovation,
-          automation, and security-first thinking. Our mission is to help businesses stay agile,
-          resilient, and ready for tomorrow’s challenges.
-        </p>
-
-        <!-- Item 1 -->
-        <div class="wc-about-list-item d-flex gap-3 mb-3" data-cue="slideInUp">
-          <div class="wc-about-list-icon p-3 d-flex align-items-center justify-content-center bg-theme-light">
-            <img src="./assets/images/icon/icon-04.svg" alt="Automation">
-          </div>
-          <div>
-            <h5 class="mb-1">Proactive Monitoring & Automation</h5>
-            <p class="mb-0">We detect and resolve issues before they impact operations—ensuring maximum uptime and reliability across your infrastructure.</p>
-          </div>
-        </div>
-
-        <!-- Item 2 -->
-        <div class="wc-about-list-item d-flex gap-3" data-cue="slideInUp">
-          <div class="wc-about-list-icon p-3 d-flex align-items-center justify-content-center bg-theme-light">
-            <img src="./assets/images/icon/icon-03.svg" alt="Cloud & Security">
-          </div>
-          <div>
-            <h5 class="mb-1">Cloud & Cybersecurity Expertise</h5>
-            <p class="mb-0">From cloud migration to zero-trust frameworks, we build secure, scalable, and compliant IT environments that empower growth.</p>
-          </div>
-        </div>
-
-        <hr class="mb-0 mt-4">
-
-        <div class="d-flex align-items-center gap-4 mt-3" data-cue="slideInUp">
-          <div class="flex-shrink-0">
-            <a href="./about-v-01.html" class="wc-btn wc-btn-primary">
-              <span class="wc-btn-text">Contact Us</span>
-              <span class="wc-btn-icon"><i class="fi fi-rr-arrow-up-right"></i></span>
-            </a>
-          </div>
-          <span class="vr d-none d-sm-flex"></span>
-          <div class="flex-shrink-0 d-none d-sm-block d-lg-none d-xl-block">
-            <a href="tel:+1.630-292-3780" class="d-flex align-items-center gap-3">
-              <span class="wc-btn wc-btn-light wc-btn-icon flex-shrink-0">
-                <i class="fi fi-rr-phone-call"></i>
-              </span>
-              <span>
-                <span class="fs-12px d-block text-uppercase text-muted mb-1">Call Us</span>
-                <span class="fs-20px fw-800 tx-theme-primary ff-number"> 877-824-7272</span>
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- /Right -->
-    </div>
-  </div>
-</section>
-<!--! ================================================================ !-->
-<!--! End: About Section !-->
-<!--! ================================================================ !-->
-
-
-
-
             </div>
 
             <!-- start shape-ellipse-01 -->
@@ -997,7 +812,7 @@
     <!-- Footer -->
     <div class="text-center mt-5">
       <p class="fw-semibold mb-2 text-dark">Looking for a custom service?</p>
-      <a href="./contact-v-01.html" class="btn btn-primary rounded-pill px-4">
+      <a href="./contact.html" class="btn btn-primary rounded-pill px-4">
         Contact Us <i class="fi fi-rr-arrow-up-right ms-2"></i>
       </a>
     </div>
@@ -1005,95 +820,11 @@
   </div>
 </section>
 
-<!-- Inline style for hover & layout polish -->
-<style>
-.service-card {
-  transition: all 0.3s ease;
-  border: 1px solid rgba(0,0,0,0.05);
-}
-.service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  border-color: rgba(0, 115, 255, 0.2);
-}
-.bg-light { background: linear-gradient(180deg, #e8f0ff 0%, #f8fbff 100%) !important; }
-</style>
-<!--! ================================================================ !-->
-<!--! End: Services Section (Card Layout) !-->
-<!--! ================================================================ !-->
 
 
 
 
 
-<!--! ================================================================ !-->
-<!--! Start: Trusted Partners Section (Consistent Typography) !-->
-<!--! ================================================================ !-->
-<section class="wc-partners-area common-section bg-light">
-  <div class="container text-center">
-    <!-- Header -->
-    <h4 class="section-title fw-800 mb-3 text-dark" style="font-size: 28px;">
-      Our Trusted Partners
-    </h4>
-    <p class="text-secondary mb-5" style="max-width:650px;margin:auto;font-size:16px;">
-      We collaborate with leading technology partners to deliver innovative, secure, and reliable IT solutions that help businesses grow.
-    </p>
-
-    <!-- Partner Logos -->
-    <div class="row justify-content-center g-4">
-      <div class="col-6 col-sm-4 col-md-3 col-lg-2 fade-in">
-        <div class="partner-card bg-white shadow-sm rounded-4 p-4">
-          <img src="./assets/images/brand/SingleHop_logo_color_4_cropped.webp" alt="Partner" class="partner-logo">
-        </div>
-      </div>
-      <div class="col-6 col-sm-4 col-md-3 col-lg-2 fade-in">
-        <div class="partner-card bg-white shadow-sm rounded-4 p-4">
-          <img src="./assets/images/brand/2.png" alt="Partner" class="partner-logo">
-        </div>
-      </div>
-      <div class="col-6 col-sm-4 col-md-3 col-lg-2 fade-in">
-        <div class="partner-card bg-white shadow-sm rounded-4 p-4">
-          <img src="./assets/images/brand/SingleHop_logo_color_4_cropped.webp" alt="Partner" class="partner-logo">
-        </div>
-      </div>
-      <div class="col-6 col-sm-4 col-md-3 col-lg-2 fade-in">
-        <div class="partner-card bg-white shadow-sm rounded-4 p-4">
-          <img src="./assets/images/brand/4.png" alt="Partner" class="partner-logo">
-        </div>
-      </div>
-      <div class="col-6 col-sm-4 col-md-3 col-lg-2 fade-in">
-        <div class="partner-card bg-white shadow-sm rounded-4 p-4">
-          <img src="./assets/images/brand/5.jpeg" alt="Partner" class="partner-logo">
-        </div>
-      </div>
-      <div class="col-6 col-sm-4 col-md-3 col-lg-2 fade-in">
-        <div class="partner-card bg-white shadow-sm rounded-4 p-4">
-          <img src="./assets/images/brand/6.png" alt="Partner" class="partner-logo">
-        </div>
-      </div>
-      <div class="col-6 col-sm-4 col-md-3 col-lg-2 fade-in">
-        <div class="partner-card bg-white shadow-sm rounded-4 p-4">
-          <img src="./assets/images/brand/7.png" alt="Partner" class="partner-logo">
-        </div>
-      </div>
-      <div class="col-6 col-sm-4 col-md-3 col-lg-2 fade-in">
-        <div class="partner-card bg-white shadow-sm rounded-4 p-4">
-          <img src="./assets/images/brand/8.jpeg" alt="Partner" class="partner-logo">
-        </div>
-      </div>
-      <div class="col-6 col-sm-4 col-md-3 col-lg-2 fade-in">
-        <div class="partner-card bg-white shadow-sm rounded-4 p-4">
-          <img src="./assets/images/brand/9.png" alt="Partner" class="partner-logo">
-        </div>
-      </div>
-      <div class="col-6 col-sm-4 col-md-3 col-lg-2 fade-in">
-        <div class="partner-card bg-white shadow-sm rounded-4 p-4">
-          <img src="./assets/images/brand/10.png" alt="Partner" class="partner-logo">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- Inline Style -->
 <style>
@@ -1210,589 +941,6 @@
 
 
 
-<!--! ================================================================ !-->
-<!--! Start: Work Process Section (Brinex Style for NouvaTech) !-->
-<!--! ================================================================ !-->
-<section class="wc-work-process-area common-section">
-  <div class="container position-relative z-2">
-    <!-- Section Header -->
-    <div class="section-header max-w-650px mx-auto text-center mb-5">
-      <h6 class="section-sub-title-alt text-theme-primary" data-cue="slideInUp">
-        Our Work Process
-      </h6>
-      <h2 class="section-title" data-cursor="-opaque" data-splitting>
-        Simplify complex <span class="text-highlight">process</span> for your business.
-      </h2>
-      <p class="text-muted fs-18px mt-3">
-        We follow a proven, step-by-step strategy to deliver scalable IT solutions with precision, security, and reliability.
-      </p>
-    </div>
-
-    <!-- Process Steps -->
-    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-4" data-cues="slideInUp">
-      
-      <!-- Step 01 -->
-      <div class="col">
-        <div class="process-card text-center">
-          <div class="process-circle">
-            <img src="./assets/images/process/discovery.jpg" alt="Discovery" />
-            <div class="process-badge">01</div>
-          </div>
-          <div class="process-step-label">STEP 01</div>
-          <h4 class="process-step-title">Discovery & Assessment</h4>
-          <p class="process-step-desc">
-            We start by understanding your business goals, evaluating current systems, and identifying
-            performance, security, and scalability gaps to create a tailored IT roadmap.
-          </p>
-        </div>
-      </div>
-
-      <!-- Step 02 -->
-      <div class="col">
-        <div class="process-card text-center">
-          <div class="process-circle">
-            <img src="./assets/images/process/design.jpg" alt="Design" />
-            <div class="process-badge">02</div>
-          </div>
-          <div class="process-step-label">STEP 02</div>
-          <h4 class="process-step-title">Design & Strategy</h4>
-          <p class="process-step-desc">
-            Our experts architect optimal IT, network, and cybersecurity solutions—aligning them with your compliance, budget, and long-term goals.
-          </p>
-        </div>
-      </div>
-
-      <!-- Step 03 -->
-      <div class="col">
-        <div class="process-card text-center">
-          <div class="process-circle">
-            <img src="./assets/images/process/deployment.jpg" alt="Deployment" />
-            <div class="process-badge">03</div>
-          </div>
-          <div class="process-step-label">STEP 03</div>
-          <h4 class="process-step-title">Deployment & Integration</h4>
-          <p class="process-step-desc">
-            We deploy modern IT infrastructure using automation and best-in-class tools—ensuring seamless transitions with minimal downtime.
-          </p>
-        </div>
-      </div>
-
-      <!-- Step 04 -->
-      <div class="col">
-        <div class="process-card text-center">
-          <div class="process-circle">
-            <img src="./assets/images/process/monitoring.jpg" alt="Monitoring" />
-            <div class="process-badge">04</div>
-          </div>
-          <div class="process-step-label">STEP 04</div>
-          <h4 class="process-step-title">Monitoring & Optimization</h4>
-          <p class="process-step-desc">
-            Our NOC and ROC teams monitor your systems 24/7—using analytics and proactive maintenance to maximize uptime and performance.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!--! ================================================================ !-->
-<!--! End: Work Process Section !-->
-<!--! ================================================================ !-->
-
-
-
-
-       <!-- ================================================================ -->
-<!-- Start: Call to Action + Industries Section -->
-<!-- ================================================================ -->
-<section class="wc-call-to-action-area bg-light py-80px">
-  <div class="container">
-    <div class="row align-items-start g-4">
-      
-      <!-- LEFT: Consultation Form -->
-      <div class="col-lg-5 col-xl-5 col-xxl-4">
-        <div class="consultation-card bg-white shadow-sm rounded-4 p-4 sticky-top">
-          <h3 class="fw-800 mb-2 text-dark">Get Free Consultation</h3>
-          <p class="text-secondary mb-4">Our experts are ready to help you modernize, secure, and scale your business.</p>
-          <form action="#" class="consultation-form">
-            <div class="mb-3">
-              <input type="text" class="form-control" placeholder="Your name..." required>
-            </div>
-            <div class="mb-3">
-              <input type="email" class="form-control" placeholder="Your email..." required>
-            </div>
-            <div class="mb-3">
-              <input type="tel" class="form-control" placeholder="Your phone..." required>
-            </div>
-            <div class="mb-3">
-              <textarea class="form-control" rows="4" placeholder="Your message..."></textarea>
-            </div>
-            <button type="submit" class="wc-btn wc-btn-brand w-100 rounded-pill fw-700">Send Message</button>
-          </form>
-        </div>
-      </div>
-
-      <!-- RIGHT: Industries We Serve -->
-      <div class="col-lg-7 col-xl-7 offset-xxl-1">
-        <!-- Header -->
-        <div class="section-header mb-4">
-          <h6 class="section-sub-title-alt text-uppercase text-primary fw-600">Professional Services</h6>
-          <h2 class="section-title fw-800 text-dark mb-3">
-            Industries <span class="text-highlight">We Serve</span> with Innovative IT Solutions.
-          </h2>
-          <p class="text-secondary fs-16px mb-5">
-            NouvaTech provides technology-driven solutions across multiple sectors — from government operations to modern enterprises — helping streamline systems, improve security, and deliver measurable results.
-          </p>
-        </div>
-
-        <!-- Grid -->
-        <div class="row row-cols-1 row-cols-md-2 g-3">
-
-          <!-- Government -->
-          <div class="col">
-            <div class="industry-box d-flex align-items-center bg-white rounded-3 p-3 border">
-              <div class="industry-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 22h18M2 10h20L12 2zM6 10v6M10 10v6M14 10v6M18 10v6"/></svg>
-              </div>
-              <div class="ms-3">
-                <h6 class="fw-700 mb-1 text-dark">Government & Public Sector</h6>
-                <p class="mb-0 text-secondary small">IT Infrastructure Modernization</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Healthcare -->
-          <div class="col">
-            <div class="industry-box d-flex align-items-center bg-white rounded-3 p-3 border">
-              <div class="industry-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-8-4.5-8-11a8 8 0 0116 0c0 6.5-8 11-8 11z"/><path d="M12 10h.01"/></svg>
-              </div>
-              <div class="ms-3">
-                <h6 class="fw-700 mb-1 text-dark">Healthcare</h6>
-                <p class="mb-0 text-secondary small">Compliance & Data Security</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Education -->
-          <div class="col">
-            <div class="industry-box d-flex align-items-center bg-white rounded-3 p-3 border">
-              <div class="industry-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8l8-4 8 4-8 4-8-4z"/><path d="M12 12v8M4 12v4a8 8 0 0016 0v-4"/></svg>
-              </div>
-              <div class="ms-3">
-                <h6 class="fw-700 mb-1 text-dark">Education Technology</h6>
-                <p class="mb-0 text-secondary small">Cloud & Collaboration Solutions</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Construction -->
-          <div class="col">
-            <div class="industry-box d-flex align-items-center bg-white rounded-3 p-3 border">
-              <div class="industry-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21v-6l9-4 9 4v6M9 21v-6M15 21v-6"/></svg>
-              </div>
-              <div class="ms-3">
-                <h6 class="fw-700 mb-1 text-dark">Construction & Engineering</h6>
-                <p class="mb-0 text-secondary small">IT Management & Automation</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Financial -->
-          <div class="col">
-            <div class="industry-box d-flex align-items-center bg-white rounded-3 p-3 border">
-              <div class="industry-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
-              </div>
-              <div class="ms-3">
-                <h6 class="fw-700 mb-1 text-dark">Financial & Insurance</h6>
-                <p class="mb-0 text-secondary small">Cloud Transformation</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Manufacturing -->
-          <div class="col">
-            <div class="industry-box d-flex align-items-center bg-white rounded-3 p-3 border">
-              <div class="industry-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v4H4zM6 8v12h12V8"/></svg>
-              </div>
-              <div class="ms-3">
-                <h6 class="fw-700 mb-1 text-dark">Manufacturing</h6>
-                <p class="mb-0 text-secondary small">Automation & Smart Systems</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ================================================================ -->
-<!-- Inline Styles -->
-<style>
-  /* ==== Consultation Card ==== */
-  .consultation-card {
-    border: 1px solid rgba(0,0,0,0.05);
-  }
-  .consultation-card input,
-  .consultation-card textarea {
-    border-radius: 10px;
-    border: 1px solid rgba(0,0,0,0.15);
-    padding: 10px 15px;
-    font-size: 15px;
-  }
-  .consultation-card input:focus,
-  .consultation-card textarea:focus {
-    outline: none;
-    border-color: #0073ff;
-    box-shadow: 0 0 0 3px rgba(0,115,255,0.1);
-  }
-
-  /* ==== Industries Boxes ==== */
-  .industry-box {
-    transition: all 0.3s ease;
-  }
-  .industry-box:hover {
-    background-color: #f9fbff;
-    border-color: rgba(0,115,255,0.25);
-    transform: translateY(-4px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
-  }
-  .industry-icon .icon {
-    width: 42px;
-    height: 42px;
-    stroke: #000;
-    transition: stroke 0.3s ease, transform 0.3s ease;
-  }
-  .industry-box:hover .icon {
-    stroke: #0073ff;
-    transform: scale(1.1);
-  }
-
-  /* Typography Adjustments */
-  .section-title {
-    font-size: 32px;
-    line-height: 1.3;
-  }
-  .section-sub-title-alt {
-    letter-spacing: 1px;
-    font-size: 14px;
-  }
-</style>
-<!-- ================================================================ -->
-<!-- End: Call to Action + Industries Section -->
-<!-- ================================================================ -->
-
-
-
-
-
-
-
-
-<!-- ================================================================ -->
-<!-- Start: About Us Section -->
-<!-- ================================================================ -->
-<section id="about" class="common-section" style="background-color: #d4e2ee; color: #000;">
-  <style>
-    #about {
-      background: linear-gradient(180deg, #eff3f7 0%, #ffffff 100%);
-      padding: 80px 0;
-    }
-    #about .section-sub-title-alt {
-      font-weight: 700;
-      text-transform: uppercase;
-      color: #0073ff;
-      letter-spacing: 1px;
-    }
-    #about .section-title {
-      font-weight: 800;
-      font-size: 36px;
-      color: #1b1b1b;
-    }
-    #about p {
-      color: #333;
-      font-size: 16px;
-      line-height: 1.7;
-    }
-    #about ul.about-list {
-      list-style: none;
-      padding: 0;
-      margin-top: 25px;
-    }
-    #about ul.about-list li {
-      background: #fff;
-      border-radius: 12px;
-      padding: 14px 18px;
-      margin-bottom: 14px;
-      display: flex;
-      align-items: center;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-      transition: transform 0.2s ease;
-    }
-    #about ul.about-list li:hover {
-      transform: translateY(-3px);
-    }
-    #about ul.about-list li i {
-      background: #0073ff;
-      color: #fff;
-      border-radius: 50%;
-      width: 28px;
-      height: 28px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 12px;
-      font-size: 14px;
-    }
-  </style>
-
-  <div class="container position-relative z-2">
-    <div class="row align-items-center g-5">
-      
-      <!-- Left Column (Image) -->
-      <div class="col-lg-6">
-        <figure class="position-relative overflow-hidden rounded shadow">
-          <img 
-            src="./assets/images/general/img-meeting.jpg" 
-            class="img-fluid rounded" 
-            alt="NouvaTech Team in Meeting" />
-        </figure>
-      </div>
-
-      <!-- Right Column (Content) -->
-      <div class="col-lg-6">
-        <div class="section-header mb-0">
-          <h6 class="section-sub-title-alt">About Us</h6>
-          <h2 class="section-title mb-4">Our <span class="text-highlight">Company</span></h2>
-
-          <p class="mb-4">
-            <strong>NouvaTech, Inc.</strong> is a <strong>family-owned business</strong> based in San Juan, Puerto Rico 
-            with offices in <strong>Arizona, California, and Iowa</strong>, specializing in 
-            <strong>Managed IT Services, Software Development, IT Consulting, and Cloud Solutions.</strong> 
-            We bring together deep technical expertise and business insight to deliver transformative 
-            technology solutions for clients across industries.
-          </p>
-
-          <p class="mb-4">
-            Our core services include Microsoft Dynamics 365 implementations, Azure and AWS infrastructure management, 
-            mobile platform development, and software testing. We also offer hosted <strong>Software-as-a-Service (SaaS)</strong> 
-            solutions and system integrations powered by secure cloud architectures.
-          </p>
-
-          <p class="mb-4">
-            At NouvaTech, we partner with leading technology providers such as 
-            <strong>Microsoft, and Cloud Titan</strong> to deliver enterprise-grade results for both 
-            government and private organizations. Our proven track record in digital transformation, automation, 
-            and cybersecurity ensures clients stay agile, compliant, and ready for tomorrow.
-          </p>
-        </div>
-
-        <!-- Key Strengths (Modern List) -->
-        <ul class="about-list">
-          <li><i class="fi fi-rr-bulb"></i> Industry-leading expertise and technical excellence</li>
-          <li><i class="fi fi-rr-chart-histogram"></i> Tailored IT solutions designed for business scalability</li>
-          <li><i class="fi fi-rr-briefcase"></i> Proven success across public and private sectors</li>
-          <li><i class="fi fi-rr-shield-check"></i> Commitment to innovation, security, and reliability</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- ================================================================ -->
-<!-- End: About Us Section -->
-<!-- ================================================================ -->
-
-<!-- ================================================================ -->
-<!-- Start: Our Locations Section -->
-<!-- ================================================================ -->
-<section id="locations" class="common-section" style="background-color: #f5f8fb; color: #000;">
-  <style>
-    #locations {
-      padding: 90px 0;
-      text-align: center;
-    }
-
-    #locations .section-sub-title {
-      color: #0073ff;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 10px;
-    }
-
-    #locations .section-title {
-      font-size: 34px;
-      font-weight: 800;
-      color: #1b1b1b;
-      margin-bottom: 45px;
-    }
-
-    .location-card {
-      background: #fff;
-      border-radius: 18px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-      overflow: hidden;
-      transition: all 0.3s ease;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .location-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-    }
-
-    .location-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-
-    .location-card .card-body {
-      padding: 25px 20px;
-    }
-
-    .location-card h5 {
-      font-weight: 800;
-      color: #000;
-      font-size: 20px;
-      margin-bottom: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .location-card p {
-      color: #555;
-      font-size: 15px;
-      margin-bottom: 0;
-      line-height: 1.6;
-    }
-
-    .location-card .phone {
-      margin-top: 12px;
-      font-weight: 600;
-      color: #0073ff;
-    }
-
-    @media (max-width: 768px) {
-      .location-card img {
-        height: 180px;
-      }
-    }
-  </style>
-
-  <div class="container">
-    <h6 class="section-sub-title">Our Offices</h6>
-    <h2 class="section-title">Proudly Serving Clients Across the U.S. & Caribbean</h2>
-
-    <div class="row g-4 justify-content-center">
-
-      <!-- New Mexico -->
-      <div class="col-md-6 col-lg-3">
-        <div class="location-card">
-          <img src="./assets/images/location/Albuquerque.jpg" alt="NouvaTech New Mexico Office">
-          <div class="card-body">
-            <h5>New Mexico</h5>
-            <p>6801 Jefferson St. NE Ste 150 PMB 3134<br>
-            Albuquerque, NM 87109</p>
-            <p class="phone">Main Line: 877-824-7272</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Puerto Rico -->
-      <div class="col-md-6 col-lg-3">
-        <div class="location-card">
-          <img src="./assets/images/location/puertorico.jpg" alt="NouvaTech Puerto Rico Office">
-          <div class="card-body">
-            <h5>Puerto Rico</h5>
-            <p>San Juan Business District<br>
-            Puerto Rico 00907</p>
-            <p class="phone">Main Line: 877-824-7272</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Nevada -->
-      <div class="col-md-6 col-lg-3">
-        <div class="location-card">
-          <img src="./assets/images/location/las vegas.jpg" alt="NouvaTech Nevada Office">
-          <div class="card-body">
-            <h5>Nevada</h5>
-            <p>Downtown Technology Hub<br>
-            Nevada Operations Center</p>
-            <p class="phone">Main Line: 877-824-7272</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- California -->
-      <div class="col-md-6 col-lg-3">
-        <div class="location-card">
-          <img src="./assets/images/location/california.jpg" alt="NouvaTech California Office">
-          <div class="card-body">
-            <h5>California</h5>
-            <p>Bay Area Innovation Center<br>
-            Serving Northern & Southern California</p>
-            <p class="phone">Main Line: 877-824-7272</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-<!-- ================================================================ -->
-<!-- End: Our Locations Section -->
-<!-- ================================================================ -->
-
-<!-- ================================================================ -->
-<!-- Start: IT Marquee -->
-<!-- ================================================================ -->
-<div class="wc-marquee-slider-brand" style="background: linear-gradient(90deg, #cfe6ff 0%, #e4f0ff 100%);">
-  <div class="container-fluid overflow-hidden">
-    <!-- start marquee-slider -->
-    <div class="marquee-slider marquee-right-to-left marquee-slow">
-      <!-- start marquee-group -->
-      <div class="marquee-group bg-dot-style">
-        <div class="marquee-item"><span class="marquee-text">Managed IT Services</span></div>
-        <div class="marquee-item"><span class="marquee-text">Cloud Solutions</span></div>
-        <div class="marquee-item"><span class="marquee-text">Cybersecurity & Compliance</span></div>
-        <div class="marquee-item"><span class="marquee-text">Data Backup & Recovery</span></div>
-        <div class="marquee-item"><span class="marquee-text">System Integration</span></div>
-        <div class="marquee-item"><span class="marquee-text">IT Consulting</span></div>
-        <div class="marquee-item"><span class="marquee-text">Infrastructure Management</span></div>
-        <div class="marquee-item"><span class="marquee-text">Cloud Migration</span></div>
-      </div>
-
-      <!-- duplicate group for seamless loop -->
-      <div class="marquee-group bg-dot-style">
-        <div class="marquee-item"><span class="marquee-text">Managed IT Services</span></div>
-        <div class="marquee-item"><span class="marquee-text">Cloud Solutions</span></div>
-        <div class="marquee-item"><span class="marquee-text">Cybersecurity & Compliance</span></div>
-        <div class="marquee-item"><span class="marquee-text">Data Backup & Recovery</span></div>
-        <div class="marquee-item"><span class="marquee-text">System Integration</span></div>
-        <div class="marquee-item"><span class="marquee-text">IT Consulting</span></div>
-        <div class="marquee-item"><span class="marquee-text">Infrastructure Management</span></div>
-        <div class="marquee-item"><span class="marquee-text">Cloud Migration</span></div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- ================================================================ -->
-<!-- End: IT Marquee -->
-<!-- ================================================================ -->
-
-
-
       <!--! ================================================================ !-->
 <!--! Start: Services Overview Section (NouvaTech) !-->
 <!--! ================================================================ !-->
@@ -1801,7 +949,7 @@
 
     <!-- Header -->
     <div class="section-header text-center mb-5">
-      <h6 class="section-sub-title-alt" data-cue="slideInUp">Our Services</h6>
+      <h6 class="section-sub-title-alt" data-cue="slideInUp">Our IT Services</h6>
       <h2 class="section-title" data-cursor="-opaque" data-splitting>
         End-to-End <span class="text-highlight">IT & Cloud<span class="text-highlight-bg"
             data-cue="slideInUp" data-duration="800" data-delay="800"></span></span> Solutions
@@ -1955,6 +1103,396 @@
 <!--! End: Services Overview Section !-->
 <!--! ================================================================ !-->
 
+
+
+
+
+
+
+<!-- ================================================================ -->
+<!-- Inline Styles -->
+<style>
+  /* ==== Consultation Card ==== */
+  .consultation-card {
+    border: 1px solid rgba(0,0,0,0.05);
+  }
+  .consultation-card input,
+  .consultation-card textarea {
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,0.15);
+    padding: 10px 15px;
+    font-size: 15px;
+  }
+  .consultation-card input:focus,
+  .consultation-card textarea:focus {
+    outline: none;
+    border-color: #0073ff;
+    box-shadow: 0 0 0 3px rgba(0,115,255,0.1);
+  }
+
+  /* ==== Industries Boxes ==== */
+  .industry-box {
+    transition: all 0.3s ease;
+  }
+  .industry-box:hover {
+    background-color: #f9fbff;
+    border-color: rgba(0,115,255,0.25);
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+  }
+  .industry-icon .icon {
+    width: 42px;
+    height: 42px;
+    stroke: #000;
+    transition: stroke 0.3s ease, transform 0.3s ease;
+  }
+  .industry-box:hover .icon {
+    stroke: #0073ff;
+    transform: scale(1.1);
+  }
+
+  /* Typography Adjustments */
+  .section-title {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+  .section-sub-title-alt {
+    letter-spacing: 1px;
+    font-size: 14px;
+  }
+</style>
+<!-- ================================================================ -->
+<!-- End: Call to Action + Industries Section -->
+<!-- ================================================================ -->
+
+
+
+
+
+
+
+
+<!-- ================================================================ -->
+<!-- Start: IT Marquee -->
+<!-- ================================================================ -->
+<div class="wc-marquee-slider-brand" style="background: linear-gradient(90deg, #cfe6ff 0%, #e4f0ff 100%);">
+  <div class="container-fluid overflow-hidden">
+    <!-- start marquee-slider -->
+    <div class="marquee-slider marquee-right-to-left marquee-slow">
+      <!-- start marquee-group -->
+      <div class="marquee-group bg-dot-style">
+        <div class="marquee-item"><span class="marquee-text">Managed IT Services</span></div>
+        <div class="marquee-item"><span class="marquee-text">Cloud Solutions</span></div>
+        <div class="marquee-item"><span class="marquee-text">Cybersecurity & Compliance</span></div>
+        <div class="marquee-item"><span class="marquee-text">Data Backup & Recovery</span></div>
+        <div class="marquee-item"><span class="marquee-text">System Integration</span></div>
+        <div class="marquee-item"><span class="marquee-text">IT Consulting</span></div>
+        <div class="marquee-item"><span class="marquee-text">Infrastructure Management</span></div>
+        <div class="marquee-item"><span class="marquee-text">Cloud Migration</span></div>
+      </div>
+
+      <!-- duplicate group for seamless loop -->
+      <div class="marquee-group bg-dot-style">
+        <div class="marquee-item"><span class="marquee-text">Managed IT Services</span></div>
+        <div class="marquee-item"><span class="marquee-text">Cloud Solutions</span></div>
+        <div class="marquee-item"><span class="marquee-text">Cybersecurity & Compliance</span></div>
+        <div class="marquee-item"><span class="marquee-text">Data Backup & Recovery</span></div>
+        <div class="marquee-item"><span class="marquee-text">System Integration</span></div>
+        <div class="marquee-item"><span class="marquee-text">IT Consulting</span></div>
+        <div class="marquee-item"><span class="marquee-text">Infrastructure Management</span></div>
+        <div class="marquee-item"><span class="marquee-text">Cloud Migration</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ================================================================ -->
+<!-- End: IT Marquee -->
+<!-- ================================================================ -->
+
+
+
+
+
+
+
+
+
+<!--! ================================================================ !-->
+<!--! Start: Work Process Section (x Style for NouvaTech) !-->
+<!--! ================================================================ !-->
+<section  id="process" class="wc-work-process-area common-section">
+  <div class="container position-relative z-2">
+    <!-- Section Header -->
+    <div class="section-header max-w-650px mx-auto text-center mb-5">
+      <h6 class="section-sub-title-alt text-theme-primary" data-cue="slideInUp">
+        Our Work Process
+      </h6>
+      <h2 class="section-title" data-cursor="-opaque" data-splitting>
+        Simplify complex <span class="text-highlight">process</span> for your business.
+      </h2>
+      <p class="text-muted fs-18px mt-3">
+        We follow a proven, step-by-step strategy to deliver scalable IT solutions with precision, security, and reliability.
+      </p>
+    </div>
+
+    <!-- Process Steps -->
+    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-4" data-cues="slideInUp">
+      
+      <!-- Step 01 -->
+      <div class="col">
+        <div class="process-card text-center">
+          <div class="process-circle">
+            <img src="./assets/images/process/discovery.jpg" alt="Discovery" />
+            <div class="process-badge">01</div>
+          </div>
+          <div class="process-step-label">STEP 01</div>
+          <h4 class="process-step-title">Discovery & Assessment</h4>
+          <p class="process-step-desc">
+            We start by understanding your business goals, evaluating current systems, and identifying
+            performance, security, and scalability gaps to create a tailored IT roadmap.
+          </p>
+        </div>
+      </div>
+
+      <!-- Step 02 -->
+      <div class="col">
+        <div class="process-card text-center">
+          <div class="process-circle">
+            <img src="./assets/images/process/design.jpg" alt="Design" />
+            <div class="process-badge">02</div>
+          </div>
+          <div class="process-step-label">STEP 02</div>
+          <h4 class="process-step-title">Design & Strategy</h4>
+          <p class="process-step-desc">
+            Our experts architect optimal IT, network, and cybersecurity solutions—aligning them with your compliance, budget, and long-term goals.
+          </p>
+        </div>
+      </div>
+
+      <!-- Step 03 -->
+      <div class="col">
+        <div class="process-card text-center">
+          <div class="process-circle">
+            <img src="./assets/images/process/deployment.jpg" alt="Deployment" />
+            <div class="process-badge">03</div>
+          </div>
+          <div class="process-step-label">STEP 03</div>
+          <h4 class="process-step-title">Deployment & Integration</h4>
+          <p class="process-step-desc">
+            We deploy modern IT infrastructure using automation and best-in-class tools—ensuring seamless transitions with minimal downtime.
+          </p>
+        </div>
+      </div>
+
+      <!-- Step 04 -->
+      <div class="col">
+        <div class="process-card text-center">
+          <div class="process-circle">
+            <img src="./assets/images/process/monitoring.jpg" alt="Monitoring" />
+            <div class="process-badge">04</div>
+          </div>
+          <div class="process-step-label">STEP 04</div>
+          <h4 class="process-step-title">Monitoring & Optimization</h4>
+          <p class="process-step-desc">
+            Our NOC and ROC teams monitor your systems 24/7—using analytics and proactive maintenance to maximize uptime and performance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--! ================================================================ !-->
+<!--! End: Work Process Section !-->
+<!--! ================================================================ !-->
+
+
+
+
+       <!-- ================================================================ -->
+<!-- Start: Call to Action + Industries Section -->
+<!-- ================================================================ -->
+<section class="wc-call-to-action-area bg-light py-80px">
+  <div class="container">
+    <div class="row align-items-start g-4">
+
+
+  <!-- LEFT: Consultation Form -->
+<div class="col-lg-5 col-xl-5 col-xxl-4">
+  <div class="consultation-card bg-white shadow-sm rounded-4 p-4 sticky-top">
+    <h3 class="fw-800 mb-2 text-dark">Get a Tech Evaluation</h3>
+    <p class="text-secondary mb-4">Our experts are ready to help you modernize, secure, and scale your business.</p>
+
+    <!-- Functional Form -->
+    <form action="send-mail.php" method="POST" class="consultation-form" id="consultationForm">
+      <div class="mb-3">
+        <input type="text" name="name" class="form-control" placeholder="Your name..." required>
+      </div>
+      <div class="mb-3">
+        <input type="email" name="email" class="form-control" placeholder="Your email..." required>
+      </div>
+      <div class="mb-3">
+        <input type="tel" name="phone" class="form-control" placeholder="Your phone..." required>
+      </div>
+      <div class="mb-3">
+        <textarea name="message" class="form-control" rows="4" placeholder="Your message..."></textarea>
+      </div>
+      <button type="submit" class="wc-btn wc-btn-brand w-100 rounded-pill fw-700">Send Message</button>
+
+      <!-- Feedback Message -->
+      <div id="form-message" class="mt-3 text-center fw-600"></div>
+    </form>
+  </div>
+</div>
+
+<!-- JS for smooth feedback -->
+<script>
+document.getElementById("consultationForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
+  const form = e.target;
+  const msg = document.getElementById("form-message");
+  const data = new FormData(form);
+
+  // Reset message
+  msg.textContent = "Sending message...";
+  msg.style.color = "#555";
+
+  try {
+    const response = await fetch(form.action, { method: "POST", body: data });
+    const result = await response.text();
+
+    if (result.includes("success")) {
+      msg.textContent = "✅ Your message has been sent successfully!";
+      msg.style.color = "green";
+      form.reset();
+    } else {
+      msg.textContent = "⚠️ There was a problem sending your message. Please try again.";
+      msg.style.color = "red";
+    }
+  } catch (error) {
+    msg.textContent = "⚠️ Network error. Please check your connection.";
+    msg.style.color = "red";
+  }
+
+  // Fade out message after 6 seconds
+  setTimeout(() => {
+    msg.textContent = "";
+  }, 6000);
+});
+</script>
+
+
+
+
+      
+
+      <!-- RIGHT: Industries We Serve -->
+      <div class="col-lg-7 col-xl-7 offset-xxl-1">
+        <!-- Header -->
+        <div class="section-header mb-4">
+          <h6 class="section-sub-title-alt text-uppercase text-primary fw-600">Professional Services</h6>
+          <h2 class="section-title fw-800 text-dark mb-3">
+            Industries <span class="text-highlight">We Serve</span> with Innovative IT Solutions.
+          </h2>
+          <p class="text-secondary fs-16px mb-5">
+            NouvaTech provides technology-driven solutions across multiple sectors — from government operations to modern enterprises — helping streamline systems, improve security, and deliver measurable results.
+          </p>
+        </div>
+
+        <!-- Grid -->
+        <div class="row row-cols-1 row-cols-md-2 g-3">
+
+          <!-- Government -->
+          <div class="col">
+            <div class="industry-box d-flex align-items-center bg-white rounded-3 p-3 border">
+              <div class="industry-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 22h18M2 10h20L12 2zM6 10v6M10 10v6M14 10v6M18 10v6"/></svg>
+              </div>
+              <div class="ms-3">
+                <h6 class="fw-700 mb-1 text-dark">Government & Public Sector</h6>
+                <p class="mb-0 text-secondary small">IT Infrastructure Modernization</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Healthcare -->
+          <div class="col">
+            <div class="industry-box d-flex align-items-center bg-white rounded-3 p-3 border">
+              <div class="industry-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-8-4.5-8-11a8 8 0 0116 0c0 6.5-8 11-8 11z"/><path d="M12 10h.01"/></svg>
+              </div>
+              <div class="ms-3">
+                <h6 class="fw-700 mb-1 text-dark">Healthcare</h6>
+                <p class="mb-0 text-secondary small">Compliance & Data Security</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education -->
+          <div class="col">
+            <div class="industry-box d-flex align-items-center bg-white rounded-3 p-3 border">
+              <div class="industry-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8l8-4 8 4-8 4-8-4z"/><path d="M12 12v8M4 12v4a8 8 0 0016 0v-4"/></svg>
+              </div>
+              <div class="ms-3">
+                <h6 class="fw-700 mb-1 text-dark">Education Technology</h6>
+                <p class="mb-0 text-secondary small">Cloud & Collaboration Solutions</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Construction -->
+          <div class="col">
+            <div class="industry-box d-flex align-items-center bg-white rounded-3 p-3 border">
+              <div class="industry-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21v-6l9-4 9 4v6M9 21v-6M15 21v-6"/></svg>
+              </div>
+              <div class="ms-3">
+                <h6 class="fw-700 mb-1 text-dark">Construction & Engineering</h6>
+                <p class="mb-0 text-secondary small">IT Management & Automation</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Financial -->
+          <div class="col">
+            <div class="industry-box d-flex align-items-center bg-white rounded-3 p-3 border">
+              <div class="industry-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
+              </div>
+              <div class="ms-3">
+                <h6 class="fw-700 mb-1 text-dark">Financial & Insurance</h6>
+                <p class="mb-0 text-secondary small">Cloud Transformation</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Manufacturing -->
+          <div class="col">
+            <div class="industry-box d-flex align-items-center bg-white rounded-3 p-3 border">
+              <div class="industry-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v4H4zM6 8v12h12V8"/></svg>
+              </div>
+              <div class="ms-3">
+                <h6 class="fw-700 mb-1 text-dark">Manufacturing</h6>
+                <p class="mb-0 text-secondary small">Automation & Smart Systems</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
 <!--! ================================================================ !-->
 
 <!-- ================================================================ -->
@@ -2040,14 +1578,20 @@
   </style>
 
   <div class="contact-inner">
-    <div class="icon">
-      <i class="fi fi-rr-envelope"></i>
-    </div>
-    <div class="text">
-      <h4>Let’s collaborate and build your next IT innovation.</h4>
-      <p>Reach our solutions team at <a href="mailto:info@nouvatech.com">info@nouvatech.com</a></p>
-    </div>
+  <div class="icon">
+    <i class="fi fi-rr-envelope"></i>
   </div>
+  <div class="text">
+    <h4>Let’s collaborate and build your next IT innovation.</h4>
+    <p>
+      Reach our solutions team at
+      <a href="./contact.html#contact" class="contact-email-link">
+        info@nouvatech.com
+      </a>
+    </p>
+  </div>
+</div>
+
 </section>
 <!-- ================================================================ -->
 <!-- End: Contact Banner -->
@@ -2058,7 +1602,7 @@
      <!--! ================================================================ !-->
 <!--! Start: Managed Services Packages (NouvaTech) !-->
 <!--! ================================================================ !-->
-<section class="wc-pricing-plan-area-01 common-section bg-theme-light">
+<section   id="pricing" class="wc-pricing-plan-area-01 common-section bg-theme-light">
   <div class="container position-relative z-2">
 
     <!-- Section Header -->
@@ -2256,6 +1800,463 @@
         <!--! ================================================================ !-->
         <!--! End: News & Insights Section !-->
         <!--! ================================================================ !-->
+
+
+
+
+<!-- Inline style for hover & layout polish -->
+<style>
+.service-card {
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-color: rgba(0, 115, 255, 0.2);
+}
+.bg-light { background: linear-gradient(180deg, #e8f0ff 0%, #f8fbff 100%) !important; }
+</style>
+<!--! ================================================================ !-->
+<!--! End: Services Section (Card Layout) !-->
+<!--! ================================================================ !-->
+
+
+
+
+
+<!--! ================================================================ !-->
+<!--! Start: Trusted Partners Section (Consistent Typography) !-->
+<!--! ================================================================ !-->
+<section class="wc-partners-area common-section bg-light">
+  <div class="container text-center">
+    <!-- Header -->
+    <h4 class="section-title fw-800 mb-3 text-dark" style="font-size: 28px;">
+      Our Trusted Partners
+    </h4>
+    <p class="text-secondary mb-5" style="max-width:650px;margin:auto;font-size:16px;">
+      We collaborate with leading technology partners to deliver innovative, secure, and reliable IT solutions that help businesses grow.
+    </p>
+
+    <!-- Partner Logos -->
+    <div class="row justify-content-center g-4">
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2 fade-in">
+        <div class="partner-card bg-white shadow-sm rounded-4 p-4">
+          <img src="./assets/images/brand/SingleHop_logo_color_4_cropped.webp" alt="Partner" class="partner-logo">
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2 fade-in">
+        <div class="partner-card bg-white shadow-sm rounded-4 p-4">
+          <img src="./assets/images/brand/2.png" alt="Partner" class="partner-logo">
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2 fade-in">
+        <div class="partner-card bg-white shadow-sm rounded-4 p-4">
+          <img src="./assets/images/brand/SingleHop_logo_color_4_cropped.webp" alt="Partner" class="partner-logo">
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2 fade-in">
+        <div class="partner-card bg-white shadow-sm rounded-4 p-4">
+          <img src="./assets/images/brand/4.png" alt="Partner" class="partner-logo">
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2 fade-in">
+        <div class="partner-card bg-white shadow-sm rounded-4 p-4">
+          <img src="./assets/images/brand/5.jpeg" alt="Partner" class="partner-logo">
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2 fade-in">
+        <div class="partner-card bg-white shadow-sm rounded-4 p-4">
+          <img src="./assets/images/brand/6.png" alt="Partner" class="partner-logo">
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2 fade-in">
+        <div class="partner-card bg-white shadow-sm rounded-4 p-4">
+          <img src="./assets/images/brand/7.png" alt="Partner" class="partner-logo">
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2 fade-in">
+        <div class="partner-card bg-white shadow-sm rounded-4 p-4">
+          <img src="./assets/images/brand/8.jpeg" alt="Partner" class="partner-logo">
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2 fade-in">
+        <div class="partner-card bg-white shadow-sm rounded-4 p-4">
+          <img src="./assets/images/brand/9.png" alt="Partner" class="partner-logo">
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2 fade-in">
+        <div class="partner-card bg-white shadow-sm rounded-4 p-4">
+          <img src="./assets/images/brand/10.png" alt="Partner" class="partner-logo">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- ================================================================ -->
+<!-- Start: About / Our Company + History (Modern Redesign) -->
+<!-- ================================================================ -->
+<section id="about" class="wc-about-area common-section" style="background: linear-gradient(180deg, #f5f8fb 0%, #ffffff 100%);">
+  <style>
+    /* Base layout */
+    #about {
+      padding: 100px 0;
+      position: relative;
+    }
+
+    #about h1, #about h2, #about h3, #about h4, #about p, #about span {
+      color: #1a1a1a !important;
+    }
+
+    #about .row {
+      align-items: center;
+      gap: 60px 0 !important;
+    }
+
+    #about .col-media, #about .col-copy {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    /* Image styling */
+    .about-figure {
+      position: relative;
+      display: block;
+    }
+
+    .about-figure img {
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      display: block;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.08);
+      object-fit: cover;
+    }
+
+    /* Subtle gradient overlay behind image */
+    .about-figure::before {
+      content: "";
+      position: absolute;
+      inset: -30px;
+      background: radial-gradient(ellipse at top right, rgba(0,115,255,0.08), transparent 70%);
+      border-radius: 24px;
+      z-index: -1;
+    }
+
+    /* Experience badge */
+    .about-badge {
+      position: absolute;
+      left: -25px;
+      bottom: -25px;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(145deg, #ffffff, #e7edf4);
+      box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .about-badge .num {
+      font-weight: 800;
+      font-size: clamp(38px, 5vw, 58px);
+      color: var(--wc-theme-primary, #0073ff);
+    }
+
+    .about-badge .txt {
+      font-size: 15px;
+      color: #333;
+      margin-top: 4px;
+    }
+
+    /* Section text */
+    #about .section-sub-title {
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #0073ff;
+    }
+
+    #about .section-title {
+      font-weight: 800;
+      font-size: 38px;
+      color: #111;
+    }
+
+    #about p {
+      font-size: 17px;
+      line-height: 1.75;
+      color: #444;
+    }
+
+    /* Highlight bar */
+    .highlight-bar {
+      width: 60px;
+      height: 4px;
+      background: #0073ff;
+      margin-bottom: 20px;
+      border-radius: 2px;
+    }
+
+    /* About list */
+    .about-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 25px;
+    }
+
+    .about-list li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+      font-weight: 500;
+      color: #222;
+    }
+
+    .about-list li i {
+      color: #0073ff;
+      margin-right: 10px;
+      font-size: 18px;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      #about .col-media, #about .col-copy {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+      .about-badge {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -30px;
+        width: 160px;
+        height: 160px;
+      }
+      .about-figure {
+        margin-bottom: 60px;
+      }
+    }
+  </style>
+
+  <div class="container position-relative z-2">
+    <div class="row g-0">
+      <!-- Left: Image -->
+      <div class="col-media col-lg-6 mb-5 mb-lg-0">
+        <figure class="about-figure">
+          <img src="./assets/images/general/img-meeting.jpg" alt="NouvaTech Team">
+          <div class="about-badge">
+            <span class="num">15+</span>
+            <span class="txt">Years of<br>Experience</span>
+          </div>
+        </figure>
+      </div>
+
+      <!-- Right: Copy -->
+      <div class="col-copy col-lg-6 ps-0 ps-lg-5">
+        <div class="highlight-bar"></div>
+        <h6 class="section-sub-title">About Our Company</h6>
+        <h2 class="section-title mb-4">
+          Building the Future of <span class="text-highlight">Intelligent IT</span>
+        </h2>
+
+        <p>
+          <strong>NouvaTech, Inc.</strong> is a <strong>family-owned technology company</strong> headquartered in 
+          <strong>San Juan, Puerto Rico</strong>, with offices across <strong>Arizona, California, and Iowa</strong>.  
+          We specialize in <strong>Managed IT Services, Software Development, Cloud Infrastructure,</strong> and 
+          <strong>Cybersecurity Solutions</strong> that help organizations modernize, protect, and scale their digital operations.
+        </p>
+
+        <p>
+          With over 15 years of experience, our teams integrate innovation, automation, and 
+          security-driven design to keep businesses resilient in an ever-changing landscape.
+        </p>
+
+        <h5 class="fw-bold mt-5 mb-2">Our Story</h5>
+        <p>
+          Founded in 2008 as a small local IT firm in Puerto Rico, NouvaTech started by providing 
+          network and server support for small enterprises and local government offices.  
+          Through word-of-mouth, consistent quality, and a commitment to client trust, the company 
+          evolved into a nationwide provider of end-to-end technology services.
+        </p>
+
+        <p class="mb-4">
+          Today, NouvaTech partners with leading providers like <strong>Microsoft</strong> and <strong>Cloud Titan</strong>, 
+          delivering modern IT solutions that drive transformation and growth while staying true to its 
+          founding values — reliability, integrity, and innovation.
+        </p>
+
+        <ul class="about-list">
+          <li><i class="fi fi-rr-bulb"></i> Technology crafted for real business results</li>
+          <li><i class="fi fi-rr-briefcase"></i> Experienced in both public and private sectors</li>
+          <li><i class="fi fi-rr-shield-check"></i> Security and scalability at every layer</li>
+          <li><i class="fi fi-rr-rocket-lunch"></i> Driven by innovation and client success</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ================================================================ -->
+<!-- End: About / Our Company + History (Modern Redesign) -->
+<!-- ================================================================ -->
+
+
+
+<!-- ================================================================ -->
+<!-- Start: Our Locations Section -->
+<!-- ================================================================ -->
+<section id="locations" class="common-section" style="background-color: #f5f8fb; color: #000;">
+  <style>
+    #locations {
+      padding: 90px 0;
+      text-align: center;
+    }
+
+    #locations .section-sub-title {
+      color: #0073ff;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    #locations .section-title {
+      font-size: 34px;
+      font-weight: 800;
+      color: #1b1b1b;
+      margin-bottom: 45px;
+    }
+
+    .location-card {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      transition: all 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .location-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    .location-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .location-card .card-body {
+      padding: 25px 20px;
+    }
+
+    .location-card h5 {
+      font-weight: 800;
+      color: #000;
+      font-size: 20px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .location-card p {
+      color: #555;
+      font-size: 15px;
+      margin-bottom: 0;
+      line-height: 1.6;
+    }
+
+    .location-card .phone {
+      margin-top: 12px;
+      font-weight: 600;
+      color: #0073ff;
+    }
+
+    @media (max-width: 768px) {
+      .location-card img {
+        height: 180px;
+      }
+    }
+  </style>
+
+  <div class="container">
+    <h6 class="section-sub-title">Our Offices</h6>
+    <h2 class="section-title">Proudly Serving Clients Across the U.S. & Caribbean</h2>
+
+    <div class="row g-4 justify-content-center">
+
+      <!-- New Mexico -->
+      <div class="col-md-6 col-lg-3">
+        <div class="location-card">
+          <img src="./assets/images/location/Albuquerque.jpg" alt="NouvaTech New Mexico Office">
+          <div class="card-body">
+            <h5>New Mexico</h5>
+            <p>6801 Jefferson St. NE Ste 150 PMB 3134<br>
+            Albuquerque, NM 87109</p>
+            <p class="phone">Main Line: 877-824-7272</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Puerto Rico -->
+      <div class="col-md-6 col-lg-3">
+        <div class="location-card">
+          <img src="./assets/images/location/puertorico.jpg" alt="NouvaTech Puerto Rico Office">
+          <div class="card-body">
+            <h5>Puerto Rico</h5>
+            <p>San Juan Business District<br>
+            Puerto Rico 00907</p>
+            <p class="phone">Main Line: 877-824-7272</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nevada -->
+      <div class="col-md-6 col-lg-3">
+        <div class="location-card">
+          <img src="./assets/images/location/las vegas.jpg" alt="NouvaTech Nevada Office">
+          <div class="card-body">
+            <h5>Nevada</h5>
+            <p>Downtown Technology Hub<br>
+            Nevada Operations Center</p>
+            <p class="phone">Main Line: 877-824-7272</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- California -->
+      <div class="col-md-6 col-lg-3">
+        <div class="location-card">
+          <img src="./assets/images/location/california.jpg" alt="NouvaTech California Office">
+          <div class="card-body">
+            <h5>California</h5>
+            <p>Bay Area Innovation Center<br>
+            Serving Northern & Southern California</p>
+            <p class="phone">Main Line: 877-824-7272</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ================================================================ -->
+<!-- End: Our Locations Section -->
+<!-- ================================================================ -->
+
+
+
+
         <!--! ================================================================ !-->
         <!--! Start: FAQ'S Section !-->
         <!--! ================================================================ !-->

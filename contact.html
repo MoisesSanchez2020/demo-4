@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NouvaTech | Free IT Assessment</title>
+
+  <style>
+    /* ============================================================= */
+    /* NouvaTech - Premium Request Form Page (Upgraded Copy + Design) */
+    /* ============================================================= */
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: "Plus Jakarta Sans", "Mulish", sans-serif;
+      background: linear-gradient(180deg, #f4f8ff 0%, #ffffff 100%);
+      color: #111;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ---------- Header ---------- */
+    header {
+      background-color: #ffffff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      padding: 15px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header img {
+      height: 42px;
+    }
+    header a.home-btn {
+      text-decoration: none;
+      color: #fff;
+      background: linear-gradient(90deg, #0073ff 0%, #005fd1 100%);
+      padding: 10px 22px;
+      border-radius: 30px;
+      font-weight: 600;
+      box-shadow: 0 4px 10px rgba(0, 115, 255, 0.3);
+      transition: all 0.3s ease;
+    }
+    header a.home-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(0, 115, 255, 0.4);
+    }
+
+    /* ---------- Section ---------- */
+    section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 100px 20px;
+      background: radial-gradient(circle at top right, #f4f8ff, #ffffff);
+    }
+
+    .consultation-card {
+      background: #fff;
+      border: 1px solid #e0e7f1;
+      border-radius: 20px;
+      padding: 60px 55px;
+      max-width: 850px;
+      width: 100%;
+      box-shadow: 0 15px 45px rgba(0, 30, 80, 0.08);
+      animation: fadeIn 0.8s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      font-weight: 800;
+      color: #0b162b;
+      font-size: 28px;
+      margin-bottom: 18px;
+    }
+
+    h3 {
+      font-weight: 700;
+      color: #0073ff;
+      margin-top: 45px;
+      margin-bottom: 10px;
+    }
+
+    p.subtitle {
+      color: #444;
+      margin-bottom: 20px;
+      line-height: 1.75;
+      font-size: 16px;
+    }
+
+    /* ---------- List ---------- */
+    ul.assessment-points {
+      list-style: none;
+      padding: 0;
+      margin: 15px 0 35px 0;
+    }
+    ul.assessment-points li {
+      padding-left: 30px;
+      position: relative;
+      margin-bottom: 10px;
+      color: #333;
+      font-size: 16px;
+      line-height: 1.65;
+    }
+    ul.assessment-points li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #0073ff;
+      font-weight: 800;
+    }
+
+    .divider {
+      border: none;
+      height: 1px;
+      background: rgba(0, 0, 0, 0.08);
+      margin: 35px 0;
+    }
+
+    /* ---------- Form ---------- */
+    .form-control,
+    textarea {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid #ccd6e0;
+      font-size: 15px;
+      padding: 14px 16px;
+      margin-bottom: 16px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      background: #fafcff;
+    }
+
+    .form-control:focus,
+    textarea:focus {
+      border-color: #0073ff;
+      outline: none;
+      box-shadow: 0 0 0 4px rgba(0, 115, 255, 0.1);
+      background: #fff;
+    }
+
+    label {
+      font-weight: 600;
+      color: #0b162b;
+      font-size: 15px;
+      margin-bottom: 6px;
+      display: inline-block;
+    }
+
+    /* ---------- Checkbox ---------- */
+    .checkbox-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .checkbox-group label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 15px;
+      color: #333;
+      cursor: pointer;
+    }
+    .checkbox-group input[type="checkbox"] {
+      accent-color: #0073ff;
+      width: 18px;
+      height: 18px;
+    }
+
+    /* ---------- Button ---------- */
+    .wc-btn {
+      background: linear-gradient(90deg, #0073ff 0%, #005fd1 100%);
+      color: #fff;
+      font-weight: 700;
+      border: none;
+      border-radius: 50px;
+      padding: 15px 22px;
+      width: 100%;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 115, 255, 0.3);
+    }
+    .wc-btn:hover {
+      background: linear-gradient(90deg, #005fd1 0%, #004bb2 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(0, 115, 255, 0.4);
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #fff;
+      color: #777;
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+      font-size: 14px;
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 768px) {
+      .consultation-card {
+        padding: 35px 25px;
+      }
+      h2 {
+        font-size: 22px;
+      }
+      p.subtitle {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <img src="./assets/images/logo/nouva-logo.png" alt="NouvaTech Logo" />
+    <a href="index.html" class="home-btn">Home</a>
+  </header>
+
+  <!-- FORM SECTION -->
+  <section id="contact">
+    <div class="consultation-card">
+      <h2>Transform IT Challenges into Growth Opportunities</h2>
+      <p class="subtitle">
+        Technology should empower your business — not slow it down. At NouvaTech, we help organizations modernize, secure, and optimize their IT infrastructure with solutions tailored to their size, industry, and long-term goals.
+      </p>
+
+      <p class="subtitle">
+        Complete the form below and one of our specialists will reach out to discuss your current setup, goals, and opportunities for improvement.
+        By the end of your free consultation, you’ll walk away with actionable recommendations — whether you choose to implement them yourself or partner with NouvaTech.
+      </p>
+
+      <ul class="assessment-points">
+        <li>Identify security vulnerabilities and system inefficiencies</li>
+        <li>Discover cost-saving opportunities across licenses and hardware</li>
+        <li>Improve employee productivity through smarter IT automation</li>
+        <li>Get a personalized roadmap for sustainable IT growth</li>
+      </ul>
+
+      <hr class="divider" />
+
+      <h3>Request Your Free IT Assessment</h3>
+      <p class="subtitle">Let’s build a smarter, safer, and more efficient IT environment for your business.</p>
+
+      <div id="form-status" class="d-none"></div>
+
+      <form id="integral-request-form" action="process-form.php" method="POST" enctype="multipart/form-data" novalidate>
+        <input type="text" name="name" class="form-control" placeholder="Your name*" required />
+        <input type="email" name="email" class="form-control" placeholder="Your email*" required />
+        <input type="tel" name="phone" class="form-control" placeholder="Your phone*" required />
+
+        <label>What solutions does your business need?*</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="solutions[]" value="IT Services" /> IT Services</label>
+          <label><input type="checkbox" name="solutions[]" value="Copiers, Printers, Mail Machines, Applications" /> Copiers, Printers, Mail Machines, Applications</label>
+          <label><input type="checkbox" name="solutions[]" value="Video Conferencing, Phones, VoIP" /> Video Conferencing, Phones, VoIP</label>
+          <label><input type="checkbox" name="solutions[]" value="Security & Surveillance" /> Security & Surveillance</label>
+          <label><input type="checkbox" name="solutions[]" value="Digital Signage" /> Digital Signage</label>
+        </div>
+
+        <textarea name="message" rows="4" placeholder="Describe your current IT challenges or goals*" required></textarea>
+
+        <input type="file" name="attachment" class="form-control" accept=".pdf,.png,.jpg,.jpeg,.txt,.log,.csv,.doc,.docx,.xls,.xlsx" />
+        <div class="form-text">Attach a screenshot or document (optional, max 10 MB).</div>
+
+        <button type="submit" class="wc-btn">Submit Request</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>© 2025 NouvaTech. All rights reserved.</footer>
+
+  <script>
+    const form = document.getElementById("integral-request-form");
+    const status = document.getElementById("form-status");
+
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+      status.textContent = "Submitting your request...";
+      status.className = "";
+      status.style.color = "#555";
+
+      const data = new FormData(form);
+
+      try {
+        const res = await fetch(form.action, { method: "POST", body: data });
+        const result = await res.json();
+
+        if (result.success) {
+          status.textContent = result.message || "✅ Your request has been sent!";
+          status.className = "alert-success";
+          form.reset();
+        } else {
+          status.textContent = result.message || "⚠️ There was an issue sending your request.";
+          status.className = "alert-danger";
+        }
+      } catch (error) {
+        status.textContent = "⚠️ Network error. Please try again.";
+        status.className = "alert-danger";
+      }
+
+      setTimeout(() => (status.textContent = ""), 6000);
+    });
+  </script>
+</body>
+</html>
