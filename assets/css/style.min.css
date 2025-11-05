@@ -1429,3 +1429,22 @@ body .loader-wrapper .loader{ height: 5px;width: 200px;border-radius: 5px;--c: n
 
 
 
+/* ========================================================= */
+/* NouvaTech Responsive Spacing Patch — November 2025         */
+/* ========================================================= */
+
+/* 1. Extra breathing space below the form on mobile */
+@media (max-width: 768px) {
+  .consultation-card {
+    margin-bottom: 40px !important;
+  }
+}
+
+/* 2. Tighter table padding under 420px to prevent scroll */
+@media (max-width: 420px) {
+  .wc-pricing-compare-area table td,
+  .wc-pricing-compare-area table th {
+    padding: 8px 6px !important;
+    font-size: 14px !important;
+  }
+}
