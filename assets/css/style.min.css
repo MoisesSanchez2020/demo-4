@@ -1317,3 +1317,115 @@ body .loader-wrapper .loader{ height: 5px;width: 200px;border-radius: 5px;--c: n
 
 
 
+/* ========================================================= */
+/* Disable hover and transition effects for all buttons only */
+/* ========================================================= */
+
+.wc-btn,
+.wc-btn-primary,
+.wc-btn-blue,
+.get-eval-btn,
+.wc-btn-outline-primary {
+  transition: none !important;
+  transform: none !important;
+}
+
+/* Remove hover/focus animations only — keep colors and shadows */
+.wc-btn:hover,
+.wc-btn-primary:hover,
+.wc-btn-blue:hover,
+.get-eval-btn:hover,
+.wc-btn-outline-primary:hover,
+.wc-btn:focus,
+.wc-btn-primary:focus,
+.wc-btn-blue:focus,
+.get-eval-btn:focus,
+.wc-btn-outline-primary:focus,
+.wc-btn:active,
+.wc-btn-primary:active,
+.wc-btn-blue:active,
+.get-eval-btn:active,
+.wc-btn-outline-primary:active {
+  transform: none !important;
+  transition: none !important;
+  filter: none !important;
+  box-shadow: none !important;
+}
+
+
+
+/* ========================================================= */
+/* Disable hover/transition effects only for the Send Message */
+/* button inside the contact form                            */
+/* ========================================================= */
+/* ========================================================= */
+/* Static Blue Button — Unified for all CTA / Form buttons   */
+/* ========================================================= */
+.wc-btn-static {
+  background-color: #0073ff; /* NouvaTech blue */
+  color: #ffffff !important;
+  border: none;
+  transition: none;
+  transform: none;
+  box-shadow: none;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* Rounded version */
+.wc-btn-static.rounded-pill {
+  border-radius: 50px;
+}
+
+/* Keep it static (no hover, focus, or motion) */
+.wc-btn-static:hover,
+.wc-btn-static:focus,
+.wc-btn-static:active {
+  background-color: #0073ff;
+  color: #ffffff !important;
+  transform: none;
+  transition: none;
+  box-shadow: none;
+  opacity: 1;
+}
+/* ========================================================= */
+/* NouvaTech Unified Button Style — Static Blue with Subtle Effect */
+/* Applies to: Send Message / Request Plan / Talk to Specialist    */
+/* ========================================================= */
+.wc-btn-static {
+  background-color: #0073ff; /* NouvaTech Blue */
+  color: #ffffff !important;
+  border: none;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Unified hover / focus effect — gentle lift + shadow */
+.wc-btn-static:hover,
+.wc-btn-static:focus {
+  transform: translateY(-2px); /* small lift */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* soft shadow */
+  background-color: #0073ff; /* same color */
+  color: #ffffff !important;
+}
+
+/* On click — light press-down */
+.wc-btn-static:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+
