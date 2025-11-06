@@ -1286,6 +1286,89 @@
 
 
 
+<style>
+  /* Process Section */
+  #process {
+    background: #f9fbfd;
+    padding: 90px 0;
+  }
+
+  .process-card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    padding: 40px 25px;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .process-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  }
+
+  .process-circle {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  }
+
+  .process-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .process-badge {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: #0073ff;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .process-step-label {
+    color: #0073ff;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .process-step-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #111;
+  }
+
+  .process-step-desc {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+    flex-grow: 1;
+  }
+
+  @media (max-width: 768px) {
+    .process-card {
+      padding: 30px 20px;
+    }
+  }
+</style>
 
 
 <!--! ================================================================ !-->
