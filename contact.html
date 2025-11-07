@@ -321,37 +321,7 @@
 
 
 
-<script>
-window.addEventListener("DOMContentLoaded", () => {
-  const form = document.querySelector("#contactForm");
-  const messageDiv = document.createElement("div");
-  messageDiv.id = "form-message";
-  messageDiv.style.marginTop = "10px";
-  form.appendChild(messageDiv);
 
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const data = new FormData(form);
-    const res = await fetch("send-ithelp.php", { method: "POST", body: data });
-    const result = await res.json();
-
-    if (result.success) {
-      messageDiv.textContent = "✅ Your message has been sent successfully!";
-      messageDiv.style.color = "green";
-      setTimeout(() => {
-        window.location.reload();
-        window.location.hash = "#contact";
-      }, 1500);
-    } else {
-      messageDiv.textContent = "❌ " + (result.message || "There was an issue sending your request.");
-      messageDiv.style.color = "red";
-    }
-  });
-});
-
-
-
-</script>
 
 
 </body>
