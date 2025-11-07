@@ -2962,6 +2962,55 @@
   });
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector("#consultationForm");
+  if (!form) {
+    console.log("❌ consultationForm not found");
+    return;
+  }
+  const msg = document.querySelector("#form-message");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault(); // stop page navigation
+    msg.textContent = "Sending message...";
+    msg.style.color = "#555";
+
+    try {
+      const formData = new FormData(form);
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+      });
+      const text = await response.text();
+      console.log("Server response:", text);
+
+      if (text.includes("success")) {
+        msg.textContent = "✅ Your message has been sent successfully!";
+        msg.style.color = "green";
+        form.reset();
+
+        // wait 1.5s, reload and return to form section
+        setTimeout(() => {
+          const current = window.location.href.split("#")[0];
+          window.location.href = current + "#consultationForm";
+          window.location.reload();
+        }, 1500);
+      } else {
+        msg.textContent = "⚠️ There was a problem sending your message.";
+        msg.style.color = "red";
+      }
+    } catch (err) {
+      console.error("Fetch error:", err);
+      msg.textContent = "⚠️ Network error. Please try again.";
+      msg.style.color = "red";
+    }
+  });
+});
+
+
+</script>
+
 
     <!--! ================================================================ !-->
     <!--! Footer Scripts !-->

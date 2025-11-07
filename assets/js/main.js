@@ -29,7 +29,7 @@ var theme = {
     theme.movingParticle();
     theme.bsTooltip();
 
-    // 🔒 Added global override to remove hover and animation effects
+    // 🔒 Disable hover and animation effects globally
     document.addEventListener("DOMContentLoaded", () => {
       const style = document.createElement("style");
       style.innerHTML = `
@@ -74,7 +74,8 @@ var theme = {
     progressPath.style.strokeDasharray = pathLength + " " + pathLength;
     progressPath.style.strokeDashoffset = pathLength;
     progressPath.getBoundingClientRect();
-    progressPath.style.transition = progressPath.style.WebkitTransition = "stroke-dashoffset 10ms linear";
+    progressPath.style.transition = progressPath.style.WebkitTransition =
+      "stroke-dashoffset 10ms linear";
     var updateProgress = function () {
       var scroll = $(window).scrollTop();
       var height = $(document).height() - $(window).height();
@@ -285,3 +286,90 @@ var theme = {
 };
 
 theme.init();
+
+/* -------------------------- Consultation Form Handler -------------------------- */
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("consultationForm");
+  if (!form) return;
+
+  const msg = document.getElementById("form-message");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    msg.textContent = "Sending message...";
+    msg.style.color = "#555";
+
+    try {
+      const response = await fetch(form.action, { method: "POST", body: data });
+      const result = await response.text();
+
+      if (result.includes("success")) {
+        msg.textContent = "✅ Your message has been sent successfully!";
+        msg.style.color = "green";
+        form.reset();
+
+        // Reload after short delay and scroll back to form
+        setTimeout(() => {
+          const currentUrl = window.location.href.split("#")[0];
+          window.location.href = `${currentUrl}#consultationForm`;
+          window.location.reload();
+        }, 1500);
+      } else {
+        msg.textContent = "⚠️ There was a problem sending your message. Please try again.";
+        msg.style.color = "red";
+      }
+    } catch (error) {
+      msg.textContent = "⚠️ Network error. Please check your connection.";
+      msg.style.color = "red";
+    }
+
+    // Clear message after 6s
+    setTimeout(() => (msg.textContent = ""), 6000);
+  });
+});
+
+
+
+/* -------------------------- Consultation Form Handler -------------------------- */
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("consultationForm");
+  if (!form) return;
+
+  const msg = document.getElementById("form-message");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault(); // ⛔ evita que cargue send-mail.php
+    const data = new FormData(form);
+    msg.textContent = "Sending message...";
+    msg.style.color = "#555";
+
+    try {
+      const response = await fetch(form.action, { method: "POST", body: data });
+      const result = await response.text();
+
+      if (result.includes("success")) {
+        msg.textContent = "✅ Your message has been sent successfully!";
+        msg.style.color = "green";
+        form.reset();
+
+        // Reload after 1.5s and scroll back to the same section
+        setTimeout(() => {
+          const currentUrl = window.location.href.split("#")[0];
+          window.location.href = `${currentUrl}#consultationForm`;
+          window.location.reload();
+        }, 1500);
+      } else {
+        msg.textContent = "⚠️ There was a problem sending your message.";
+        msg.style.color = "red";
+      }
+    } catch (error) {
+      msg.textContent = "⚠️ Network error. Please try again.";
+      msg.style.color = "red";
+    }
+
+    // Clear message after 6 seconds
+    setTimeout(() => (msg.textContent = ""), 6000);
+  });
+});
+

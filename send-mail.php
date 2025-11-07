@@ -1,34 +1,41 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  // Sanitize and validate fields
-  $name = strip_tags(trim($_POST["name"]));
-  $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
-  $phone = strip_tags(trim($_POST["phone"]));
-  $message = trim($_POST["message"]);
+// === NouvaTech Contact Form Handler ===
 
-  if (empty($name) || empty($email) || empty($message)) {
-    echo "error";
-    exit;
-  }
+// Configure your recipient email
+$to = "info@nouvatech.com"; // 🔧 change to your real business email
+$subject = "New Tech Evaluation Request";
 
-  // Recipient email
-  $to = "info@nouvatech.com"; // 🔹 Cambia este correo por el del cliente
-  $subject = "New Tech Evaluation Request from $name";
+// Sanitize user input
+$name = htmlspecialchars($_POST['name'] ?? '');
+$email = htmlspecialchars($_POST['email'] ?? '');
+$phone = htmlspecialchars($_POST['phone'] ?? '');
+$message = htmlspecialchars($_POST['message'] ?? '');
 
-  // Message body
-  $body = "You have received a new tech evaluation request:\n\n";
-  $body .= "Name: $name\n";
-  $body .= "Email: $email\n";
-  $body .= "Phone: $phone\n";
-  $body .= "Message:\n$message\n";
+if (!$name || !$email || !$message) {
+  echo "error";
+  exit;
+}
 
-  $headers = "From: $name <$email>";
+// Build the email content
+$body = "
+  <h2>New Tech Evaluation Form Submission</h2>
+  <p><strong>Name:</strong> {$name}</p>
+  <p><strong>Email:</strong> {$email}</p>
+  <p><strong>Phone:</strong> {$phone}</p>
+  <p><strong>Message:</strong><br>{$message}</p>
+  <hr>
+  <p>Sent from NouvaTech website contact form</p>
+";
 
-  // Send the email
-  if (mail($to, $subject, $body, $headers)) {
-    echo "success";
-  } else {
-    echo "error";
-  }
+// Headers
+$headers  = "MIME-Version: 1.0\r\n";
+$headers .= "Content-type: text/html; charset=UTF-8\r\n";
+$headers .= "From: {$name} <{$email}>\r\n";
+
+// Send email
+if (mail($to, $subject, $body, $headers)) {
+  echo "success"; // ✅ JS checks for this
+} else {
+  echo "error";
 }
 ?>
